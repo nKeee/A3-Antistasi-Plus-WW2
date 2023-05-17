@@ -1,7 +1,4 @@
-private _hasWs = "ws" in A3A_enabledDLC;
-private _hasLawsOfWar = "orange" in A3A_enabledDLC;
-private _hasApex = "expansion" in A3A_enabledDLC;
-private _hasContact = "enoch" in A3A_enabledDLC;
+
 
 ///////////////////////////
 //   Rebel Information   //
@@ -46,10 +43,6 @@ private _staticAA = "I_static_AA_F";
 ["breachingExplosivesAPC", [["DemoCharge_Remote_Mag", 1]]] call _fnc_saveToTemplate;
 ["breachingExplosivesTank", [["SatchelCharge_Remote_Mag", 1], ["DemoCharge_Remote_Mag", 2]]] call _fnc_saveToTemplate;
 
-if (_hasWs) then {
-  _vehicleAA = "I_Tura_Truck_02_aa_lxWS";
-  _staticAA = "I_Tura_ZU23_lxWS";
-};
 ["vehicleAA", _vehicleAA] call _fnc_saveToTemplate;
 ["staticAA", _staticAA] call _fnc_saveToTemplate;
 
@@ -58,29 +51,8 @@ if (_hasWs) then {
 //////////////////////////////////////
 
 //classname, price, type, availability condition
-private _shopWs = if (_hasWs) then {
-    [
-        ["I_UAV_02_lxWS", 3500, "UAV", {tierWar > 2}], 
-        ["I_G_UAV_02_IED_lxWS", 4500, "UAV", {tierWar > 3}],
-        ["I_G_Offroad_01_armor_base_lxWS", 4500, "UNARMEDCAR", {true}],
-        ["I_G_Offroad_01_armor_armed_lxWS", 4500, "ARMEDCAR", {true}],
-        ["I_G_Offroad_01_armor_AT_lxWS", 4500, "ARMEDCAR", {true}]
-    ]
-} else {
-    []
-};
 
-private _shopApex = if (_hasApex) then {
-    [
-        ["I_C_Offroad_02_unarmed_F", 200, "UNARMEDCAR", {true}], 
-        ["I_C_Offroad_02_LMG_F", 800, "ARMEDCAR", {true}],
-        ["I_C_Offroad_02_AT_F", 1450, "ARMEDCAR", {true}]
-    ]
-} else {
-    []
-};
-
-private _vehiclesBlackMarket = _shopWs + _shopApex + [
+private _vehiclesBlackMarket = [
     ["I_UAV_01_F", 2000, "UAV", {true}],
     ["I_LT_01_AA_F", 7500, "AA", {{sidesX getVariable [_x,sideUnknown] isEqualTo teamPlayer} count (milbases + airportsX) > 0}],
     ["I_APC_Wheeled_03_cannon_F", 15000, "APC", {{sidesX getVariable [_x,sideUnknown] isEqualTo teamPlayer} count seaports > 0}],
@@ -99,63 +71,19 @@ private _vehiclesBlackMarket = _shopWs + _shopApex + [
 ///////////////////////////
 
 private _initialRebelEquipment = [
-    "hgun_Pistol_heavy_02_F",
     "GLIB_FIN_M39",
-    "GLIB_FIN_5Rnd_762x54mm", "30Rnd_9x21_Red_Mag",
-    "6Rnd_45ACP_Cylinder","MiniGrenade","SmokeShell",
-    ["IEDUrbanSmall_Remote_Mag", 10], ["IEDLandSmall_Remote_Mag", 10], ["IEDUrbanBig_Remote_Mag", 3], ["IEDLandBig_Remote_Mag", 3],
-    "V_LIB_SOV_RA_MosinBelt","B_FieldPack_blk","B_FieldPack_khk",
-    "V_BandollierB_blk","V_BandollierB_cbr","V_BandollierB_rgr","H_LIB_FIN_Sotilas_GERCapGris1","V_BandollierB_oli","LIB_M39",
-    "Binocular",
-    "acc_flashlight","acc_flashlight_smg_01","acc_flashlight_pistol"
+    "GLIB_FIN_5Rnd_762x54mm",
+    "V_LIB_SOV_RA_MosinBelt",
+    "H_LIB_FIN_Sotilas_GERCapGris1"
 ];
 
-if (_hasLawsOfWar) then {
-    _initialRebelEquipment append [
-        "V_Pocketed_olive_F", 
-        "V_Pocketed_coyote_F", 
-        "V_Pocketed_black_F"
-    ];
-};
-
-private _civilianBackpacks =  [];
-if (_hasLawsOfWar) then {
-    _civilianBackpacks append [
-        "B_Messenger_Black_F", 
-        "B_Messenger_Coyote_F", 
-        "B_Messenger_Gray_F",
-        "B_Messenger_Olive_F", 
-        "B_LegStrapBag_black_F", 
-        "B_LegStrapBag_coyote_F", 
-        "B_LegStrapBag_olive_F"
-    ];
-} else {
-    _civilianBackpacks append ["B_FieldPack_blk","B_AssaultPack_blk"];
-};
+private _civilianBackpacks =  [
+    "B_FieldPack_blk"
+];
 
 ["civilianBackpacks", _civilianBackpacks createHashMapFromArray []] call _fnc_saveToTemplate;
 
 _initialRebelEquipment append _civilianBackpacks;
-
-if (_hasContact) then {
-    _initialRebelEquipment append [
-        "sgun_HunterShotgun_01_F",
-        "sgun_HunterShotgun_01_sawedoff_F",
-        "2Rnd_12Gauge_Pellets",
-        "2Rnd_12Gauge_Slug"
-    ];
-};
-
-if (_hasApex) then {
-    _initialRebelEquipment append [
-        "hgun_Pistol_01_F",
-        "10Rnd_9x21_Mag",
-        ["launch_RPG7_F", 3], 
-        ["RPG7_F", 9]
-    ];
-} else {
-    _initialRebelEquipment append [["launch_RPG32_F", 2], ["RPG32_F", 6]];
-};
 
 if (A3A_hasTFAR) then {_initialRebelEquipment append ["tf_microdagr","tf_anprc154"]};
 if (A3A_hasTFAR && startWithLongRangeRadio) then {_initialRebelEquipment append ["tf_anprc155","tf_anprc155_coyote"]};
@@ -164,54 +92,13 @@ if (A3A_hasTFARBeta && startWithLongRangeRadio) then {_initialRebelEquipment app
 ["initialRebelEquipment", _initialRebelEquipment] call _fnc_saveToTemplate;
 
 private _rebUniforms = [
-    "U_IG_Guerilla1_1",
-    "U_IG_Guerilla2_1",
-    "U_IG_Guerilla2_2",
-    "U_IG_Guerilla2_3",
-    "U_IG_Guerilla3_1",
-    "U_IG_leader",
-    "U_IG_Guerrilla_6_1",
-    "U_I_G_resistanceLeader_F",
-    "U_I_L_Uniform_01_deserter_F"
+    "U_LIB_FIN_Sotilas_g1vg1pSotaM39"
 ];
 
-private _dlcUniforms = [];
-
-if (_hasContact) then {
-    _dlcUniforms append [
-        "U_I_L_Uniform_01_camo_F",
-        "U_I_L_Uniform_01_tshirt_black_F",
-        "U_I_L_Uniform_01_tshirt_olive_F",
-        "U_I_L_Uniform_01_tshirt_skull_F",
-        "U_I_L_Uniform_01_tshirt_sport_F"
-    ];
-};
-
-if (_hasWs) then {
-    _dlcUniforms append [
-        "U_lxWS_ION_Casual1",
-        "U_lxWS_ION_Casual2",
-        "U_lxWS_ION_Casual3",
-        "U_lxWS_ION_Casual4",
-        "U_lxWS_ION_Casual5",
-        "U_lxWS_SFIA_deserter"
-    ];
-};
-
-["uniforms", _rebUniforms + _dlcUniforms] call _fnc_saveToTemplate;
+["uniforms", _rebUniforms] call _fnc_saveToTemplate;
 
 ["headgear", [
-    "H_Booniehat_khk_hs",
-    "H_Booniehat_tan",
-    "H_Cap_tan",
-    "H_Cap_oli_hs",
-    "H_Cap_blk",
-    "H_Cap_headphones",
-    "H_ShemagOpen_tan",
-    "H_Shemag_olive_hs",
-    "H_Bandanna_khk_hs",
-    "H_Bandanna_sand",
-    "H_Bandanna_cbr"
+    "H_Cap_headphones"
 ]] call _fnc_saveToTemplate;
 
 /////////////////////

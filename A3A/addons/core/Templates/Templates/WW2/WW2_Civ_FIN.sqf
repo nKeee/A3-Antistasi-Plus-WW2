@@ -16,10 +16,6 @@ private _civCarsWithWeights = [
     ,"C_Hatchback_01_sport_F", 0.3
     ,"C_Offroad_01_F", 1.0
     ,"C_SUV_01_F", 1.0
-    ,"C_Van_02_vehicle_F", 1.0                // van from Orange
-    ,"C_Van_02_transport_F", 0.2            // minibus
-    ,"C_Offroad_02_unarmed_F", 0.5            // Apex 4WD
-    ,"C_Offroad_01_comms_F", 0.1            // Contact
     ,"C_Offroad_01_covered_F", 0.1
 ];
 
@@ -63,116 +59,22 @@ if (_hasApex) then {
 //////////////////////////
 
 private _civUniforms = [
-    "U_C_Man_casual_1_F",
-    "U_C_Man_casual_2_F",
-    "U_C_Man_casual_3_F",
-    "U_C_Man_casual_4_F",
-    "U_C_Man_casual_5_F",
-    "U_C_Man_casual_6_F",
-    "U_C_ArtTShirt_01_v1_F",
-    "U_C_ArtTShirt_01_v2_F",
-    "U_C_ArtTShirt_01_v3_F",
-    "U_C_ArtTShirt_01_v4_F",
-    "U_C_ArtTShirt_01_v5_F",
-    "U_C_ArtTShirt_01_v6_F",
-    "U_NikosBody",
-    "U_NikosAgedBody",
-    "U_C_Poloshirt_blue",
-    "U_C_Poloshirt_burgundy",
-    "U_C_Poloshirt_stripped",
-    "U_C_Poloshirt_tricolour",
-    "U_C_Poloshirt_salmon",
-    "U_C_Poloshirt_redwhite",
-    "U_OrestesBody",
-    "U_C_Poor_1",
-    "U_C_HunterBody_grn",
-    "U_I_L_Uniform_01_tshirt_skull_F",
-    "U_I_L_Uniform_01_tshirt_black_F",
-    "U_I_L_Uniform_01_tshirt_sport_F",
-    "U_C_Scientist",
-    "U_C_Uniform_Scientist_02_formal_F",
-    "U_C_Uniform_Scientist_02_F",
-    "U_C_Uniform_Scientist_01_F"
+    "U_C_Man_casual_1_F"
 ];
 
 private _pressUniforms = [
-    "U_C_Journalist",
-    "U_Marshal"
+    "U_C_Journalist"
     ];
 
 private _workerUniforms = [
-    "U_C_WorkerCoveralls",
     "U_C_Uniform_Farmer_01_F"
     ];
 
-private _dlcUniforms = [];
 
-if (_hasApex) then {_dlcUniforms append [
-    "U_C_man_sport_1_F",
-    "U_C_man_sport_2_F",
-    "U_C_man_sport_3_F"];
-};
-
-if (_hasLawsOfWar) then {
-  _dlcUniforms append [
-    "U_C_Paramedic_01_F",
-    "U_C_Mechanic_01_F"
-  ];
-  _workerUniforms append [
-    "U_C_ConstructionCoverall_Black_F",
-    "U_C_ConstructionCoverall_Blue_F",
-    "U_C_ConstructionCoverall_Red_F",
-    "U_C_ConstructionCoverall_Vrana_F"
-  ];
-};
-
-if (_hasWs && {(toLowerANSI worldName) in ["sefrouramal", "takistan"]}) then {
-  _civUniforms = [
-    "U_lxWS_C_Djella_01",
-    "U_lxWS_C_Djella_02",
-    "U_lxWS_C_Djella_02a",
-    "U_lxWS_C_Djella_03",
-    "U_lxWS_C_Djella_04",
-    "U_lxWS_C_Djella_05",
-    "U_lxWS_C_Djella_06",
-    "U_lxWS_C_Djella_07",
-    "U_lxWS_Tak_01_A",
-    "U_lxWS_Tak_01_B",
-    "U_lxWS_Tak_01_C",
-    "U_lxWS_Tak_02_A",
-    "U_lxWS_Tak_02_B",
-    "U_lxWS_Tak_02_C",
-    "U_lxWS_Tak_03_A",
-    "U_lxWS_Tak_03_B",
-    "U_lxWS_Tak_03_C"
-  ];
-};
-
-["uniforms", _civUniforms + _pressUniforms + _workerUniforms + _dlcUniforms] call _fnc_saveToTemplate;
+["uniforms", _civUniforms + _pressUniforms + _workerUniforms] call _fnc_saveToTemplate;
 
 private _civhats = [
-    "H_Bandanna_blu",
-    "H_Bandanna_cbr",
-    "H_Bandanna_gry",
-    "H_Bandanna_khk",
-    "H_Bandanna_sand",
-    "H_Bandanna_sgg",
-    "H_Bandanna_surfer",
-    "H_Bandanna_surfer_blk",
-    "H_Bandanna_surfer_grn",
-    "H_Cap_blk",
-    "H_Cap_blu",
-    "H_Cap_grn",
-    "H_Cap_grn_BI",
-    "H_Cap_oli",
-    "H_Cap_red",
-    "H_Cap_surfer",
-    "H_Cap_tan",
-    "H_StrawHat",
-    "H_StrawHat_dark",
-    "H_Hat_checker",
-    "H_Hat_Safari_olive_F",
-    "H_Hat_Safari_sand_F"
+
 ];
 
 ["headgear", _civHats] call _fnc_saveToTemplate;

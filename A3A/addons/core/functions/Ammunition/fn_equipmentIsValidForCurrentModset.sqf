@@ -50,27 +50,27 @@ if ("worldWar2" in A3A_factionEquipFlags) exitWith {
 	switch (_itemType select 0) do {
 		case "Item": {
 			switch (_itemType select 1) do {
-				case "AccessoryMuzzle";
-				case "AccessoryPointer";
-				case "AccessorySights";
-				case "AccessoryBipod";
-				case "Binocular";
-				case "GPS";
-				case "LaserDesignator";
-				case "MineDetector";
-				case "NVGoggles";
+				case "AccessoryMuzzle": { false };
+				case "AccessoryPointer": { false };
+				case "AccessorySights": { false };
+				case "AccessoryBipod": { false };
+				case "Binocular": { false };
+				case "GPS": { false };
+				case "LaserDesignator": { false };
+				case "MineDetector": { false };
+				case "NVGoggles": { false };
 				case "Radio";
-				case "UAVTerminal";
+				case "UAVTerminal": { false };
 				case "Unknown";
-				case "Compass";
-				case "Watch";
+				case "Compass": { false }; // Removes vanilla compass
+				case "Watch": { false };
 				default { true };
 			};
 		};
-		case "Weapon";
-		case "Equipment";
-		case "Magazine";
-		case "Mine";
+		case "Weapon": { false };
+		case "Equipment": { false };
+		case "Magazine": { false };
+		case "Mine": { false };
 		default { true };
 	};
 };
