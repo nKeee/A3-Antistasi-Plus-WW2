@@ -6,6 +6,62 @@ class Templates
         description = "";
     };
 
+    // ************************************** World War 2 *******************************************************
+
+    class WW2_Base : Base
+    {
+        requiredAddons[] = {"fow_main","IFRB_ALL_caps_set_anvil","geistl_main"};
+        logo = "a3\ui_f\data\logos\arma3_white_ca.paa";
+        basepath = QPATHTOFOLDER(Templates\Templates\WW2);
+        priority = 50;
+        equipFlags[] = {"worldWar2"};
+    };
+
+    class WW2_GER : WW2_Base
+    {
+        side = "Occ";
+        flagTexture = "a3\data_f\flags\flag_aaf_co.paa";
+        name = "WW2 GERMANY";
+        file = "WW2_AI_GER";
+        description = $STR_A3AP_setupFactionsTab_gerww2;
+    };
+
+    class WW2_SOV : WW2_Base
+    {
+        side = "Inv";
+        flagTexture = "a3\data_f\flags\flag_aaf_co.paa";
+        name = "WW2 SOVIET";
+        file = "WW2_AI_SOV";
+        description = $STR_A3AP_setupFactionsTab_sovww2;
+    };
+
+    class WW2_Reb_FIN : WW2_Base
+    {
+        side = "Reb";
+        flagTexture = "a3\data_f\flags\flag_aaf_co.paa";
+        name = "WW2 FINLAND";
+        file = "WW2_Reb_FIN";
+        description = $STR_A3AP_setupFactionsTab_finww2;
+    };
+
+    class WW2_Riv_PS : WW2_Base
+    {
+        side = "Riv";
+        flagTexture = "a3\data_f\flags\flag_aaf_co.paa";
+        name = "WW2 PARTISANS";
+        file = "WW2_Riv_PARTISANS";
+        description = $STR_A3AP_setupFactionsTab_psww2;
+    };
+
+    class WW2_Civ : WW2_Base
+    {
+        side = "Civ";
+        flagTexture = "a3\data_f\flags\flag_aaf_co.paa";
+        name = "WW2 FINNISH CIVILIANS";
+        file = "WW2_Civ_FIN";
+        description = $STR_A3AP_setupFactionsTab_finciv;
+    };
+
     // ************************************** Western Sahara *******************************************************
 
     class WS_Base : Base

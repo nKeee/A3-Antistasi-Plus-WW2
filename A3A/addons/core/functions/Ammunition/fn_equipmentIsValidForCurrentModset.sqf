@@ -45,6 +45,36 @@ if ("lowTech" in A3A_factionEquipFlags) exitWith {
 	};
 };
 
+//TEST TO REMOVE ALL VANILLA GEAR
+if ("worldWar2" in A3A_factionEquipFlags) exitWith {
+	switch (_itemType select 0) do {
+		case "Item": {
+			switch (_itemType select 1) do {
+				case "AccessoryMuzzle";
+				case "AccessoryPointer";
+				case "AccessorySights";
+				case "AccessoryBipod";
+				case "Binocular";
+				case "GPS";
+				case "LaserDesignator";
+				case "MineDetector";
+				case "NVGoggles";
+				case "Radio";
+				case "UAVTerminal";
+				case "Unknown";
+				case "Compass";
+				case "Watch";
+				default { true };
+			};
+		};
+		case "Weapon";
+		case "Equipment";
+		case "Magazine";
+		case "Mine";
+		default { true };
+	};
+};
+
 // Remove most vanilla gear if we're not running two vanilla mods
 if !("vanilla" in A3A_factionEquipFlags) exitWith {
 	switch (_itemType select 0) do {

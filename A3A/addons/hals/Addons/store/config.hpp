@@ -30,6 +30,173 @@ class cfgHALsStore
 
 	class categories 
 	{
+
+		///////////////////////////////////////////////////////
+		// World War 2
+		///////////////////////////////////////////////////////
+
+	class handgunsww2
+		{
+			displayName = $STR_HALS_STORE_HANDGUNS;
+			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\handgun_ca.paa";
+
+			ITEM(vn_welrod, 100, PISTOL_STOCK);
+		};
+
+		class smgww2
+		{
+			displayName = $STR_HALS_STORE_SMGS;
+			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
+
+			ITEM(vn_vz61, 200, RIFLE_STOCK);
+		};
+
+		class mgww2
+		{
+			displayName = $STR_HALS_MGS;
+			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
+
+			ITEM(vn_rpd, 1100, RIFLE_STOCK);
+
+		};
+
+		class sniperriflesww2
+		{
+			displayName = $STR_HALS_SRS;
+			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
+
+			ITEM(vn_m14a1, 2000, RIFLE_STOCK);
+		};
+		
+		class riflesww2
+		{
+			displayName = $STR_HALS_ASSAULT_RIFLES_VN;
+			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
+
+			ITEM(vn_m16_usaf, 1000, RIFLE_STOCK);
+		};
+
+		class launchersww2
+		{
+			displayName = $STR_HALS_STORE_LAUNCHERS;
+			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\secondaryWeapon_ca.paa";
+
+			ITEM(vn_rpg7, 750, 15);
+		};
+
+		class launchermagazinesww2
+		{
+			displayName = $STR_HALS_STORE_LAUNCHER_AMMO;
+			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\cargoMag_ca.paa";
+
+			class vn_rpg7_mag {
+				price = 200;
+				stock = 50;
+			};
+		};
+
+		class riflegrenadesww2
+		{
+			displayName = $STR_HALS_R_GRENADES;
+			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\cargoMag_ca.paa";
+
+			class vn_22mm_m61_frag_mag {
+				price = 150;
+				stock = 50;
+			};
+
+		};
+
+		class muzzlesww2
+		{
+			displayName = $STR_HALS_M_ACC;
+			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemMuzzle_ca.paa";
+			
+			ITEM(vn_s_m14, 300, MZ_STOCK);
+		};
+
+		class underbarrelww2
+		{
+			displayName = $STR_HALS_UB_ACC;
+			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemBipod_ca.paa";
+
+			ITEM(vn_bipod_m1918, 100, 50);
+			ITEM(vn_bipod_m14, 100, 50);
+		};
+
+		class specialWeaponsww2 
+		{
+			displayName = $STR_HALS_SPECIAL_WEAPONS;
+			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
+
+			ITEM(vn_m79, 500, RIFLE_STOCK);
+		};
+
+		class opticsww2 
+		{
+			displayName = $STR_HALS_O_ACC;
+			picture = "";
+
+			class vn_o_4x_m4956 {
+				price = 450;
+				stock = 100;
+			};
+		};
+
+		class pointersww2
+		{
+			displayName = $STR_HALS_P_ACC_VN;
+			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemAcc_ca.paa";
+
+			ITEM(vn_b_carbine, 50, PN_STOCK);
+		};
+
+		class magazinesww2 
+		{
+			displayName = $STR_HALS_MAGS;
+			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\cargoMag_ca.paa";
+
+			ITEM(vn_mk1_udg_mag, 50, MZ_STOCK);
+			
+
+			///////////////////////////////////////////////////////
+			// Underbarrel
+			///////////////////////////////////////////////////////
+			ITEM(vn_40mm_m381_he_mag, 50, MZ_STOCK);
+
+			///////////////////////////////////////////////////////
+			// Pistols, SMGs
+			///////////////////////////////////////////////////////
+			ITEM(vn_m10_mag, 10, MZ_STOCK);
+
+			///////////////////////////////////////////////////////
+			// MGs
+			///////////////////////////////////////////////////////
+			ITEM(vn_dp28_mag, 125, MZ_STOCK);
+
+			///////////////////////////////////////////////////////
+			// Rifles
+			///////////////////////////////////////////////////////
+			ITEM(vn_carbine_15_mag, 25, MZ_STOCK);
+
+			///////////////////////////////////////////////////////
+			// Sniper Rifles, battle rifles
+			///////////////////////////////////////////////////////
+			ITEM(vn_m38_mag, 50, MZ_STOCK);
+
+		};	
+
+		class miscww2
+		{
+			displayName = $STR_HALS_STORE_MISC;
+			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\backpack_ca.paa";
+
+			ITEM(IEDUrbanSmall_Remote_Mag, 500, MISC_STOCK);
+
+		};
+
+
+
 		///////////////////////////////////////////////////////
 		// Aegis
 		///////////////////////////////////////////////////////
@@ -7848,6 +8015,28 @@ class cfgHALsStore
 				"optics3cbfcw",
 				"magazines3cbfcw",
 				"misc3cbfcw"
+			};
+		};
+
+		class ww2
+		{
+			displayName = $STR_ARMS_DEALER_STORE;
+			categories[] = {
+				"handgunsww2",
+				"smgww2",
+				"riflesww2",
+				"sniperRiflesww2",
+				"mgww2",
+				"specialWeaponsww2",
+				"launchersww2",
+				"launcherMagazinesww2",
+				"navigationww2",
+				"riflegrenadesvn",
+				"pointersww2",
+				"muzzlesww2",
+				"opticsww2",
+				"magazinesww2",
+				"miscww2"
 			};
 		};
 

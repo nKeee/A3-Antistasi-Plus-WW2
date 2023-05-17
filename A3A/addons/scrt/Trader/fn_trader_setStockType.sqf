@@ -24,6 +24,10 @@ switch (true) do {
         diag_log format ["%1: [Antistasi] | INFO | fn_trader_setTraderStock | Using 3CBF CW trader stock.", servertime];
         [_traderX, "3cbfcw"] call HALs_store_fnc_addTrader;
     };
+        case ("worldWar2" isEqualTo (_templateParts select 0)): {
+        Info("Initializing WW2 trader.");
+        [_traderX, "ww2"] call HALs_store_fnc_addTrader;
+    };
     case ("RHS" isEqualTo (_templateParts select 0)): {
         Info("Initializing RHS trader.");
         [_traderX, "rhs"] call HALs_store_fnc_addTrader;
