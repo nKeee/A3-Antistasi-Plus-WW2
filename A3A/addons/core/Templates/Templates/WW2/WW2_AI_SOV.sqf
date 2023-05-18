@@ -10,8 +10,8 @@ private _hasContact = "enoch" in A3A_enabledDLC;
 //   Side Information   //
 //////////////////////////
 
-["name", "CSAT"] call _fnc_saveToTemplate;
-["spawnMarkerName", format [localize "STR_supportcorridor", "CSAT"]] call _fnc_saveToTemplate;
+["name", "Red Army"] call _fnc_saveToTemplate;
+["spawnMarkerName", format [localize "STR_supportcorridor", "Red Army"]] call _fnc_saveToTemplate;
 
 ["flag", "Flag_CSAT_F"] call _fnc_saveToTemplate;
 ["flagTexture", "A3\Data_F\Flags\Flag_CSAT_CO.paa"] call _fnc_saveToTemplate;
