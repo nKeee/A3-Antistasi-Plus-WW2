@@ -286,7 +286,7 @@ _policeLoadoutData set ["sidearms", []];
 private _militiaLoadoutData = _loadoutData call _fnc_copyLoadoutData;
 _militiaLoadoutData set ["uniforms", ["U_LIB_GER_rifleman_HeerGrsDldSchkK98"]];
 _militiaLoadoutData set ["vests", ["V_LIB_GER_VestKar98_8a"]];
-_militiaLoadoutData set ["backpacks", ["B_LIB_GER_A_frame_Vide"]];
+_militiaLoadoutData set ["backpacks", ["B_LIB_GER_Radio_ACRE2"]];
 _militiaLoadoutData set ["helmets", ["H_LIB_GER_Helmet_os"]];
 
 _militiaLoadoutData set ["rifles", [
@@ -320,6 +320,40 @@ private _pilotLoadoutData = _militaryLoadoutData call _fnc_copyLoadoutData;
 _pilotLoadoutData set ["uniforms", []];
 _pilotLoadoutData set ["vests", []];
 _pilotLoadoutData set ["helmets", []];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /////////////////////////////////

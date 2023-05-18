@@ -11,91 +11,109 @@ private _hasApex = "expansion" in A3A_enabledDLC;
 //////////////////////////
 
 private _civCarsWithWeights = [
-    "C_Quadbike_01_F", 0.3
-    ,"C_Hatchback_01_F", 1.0
-    ,"C_Hatchback_01_sport_F", 0.3
-    ,"C_Offroad_01_F", 1.0
-    ,"C_SUV_01_F", 1.0
-    ,"C_Offroad_01_covered_F", 0.1
+    "LIB_GazM1_dirty", 1.0
 ];
-
-if (_hasApex) then {
-    _civCarsWithWeights append ["C_Offroad_02_unarmed_F", 1.0];
-};
 
 ["vehiclesCivCar", _civCarsWithWeights] call _fnc_saveToTemplate;
 
 
 ["vehiclesCivIndustrial", [
-    "C_Van_01_transport_F", 1.0
-    ,"C_Van_01_box_F", 0.8
-    ,"C_Truck_02_transport_F", 0.5
-    ,"C_Truck_02_covered_F", 0.5
-    ,"C_Tractor_01_F", 0.3    ]] call _fnc_saveToTemplate;
+    "C_Tractor_01_F", 0.3    ]] call _fnc_saveToTemplate;
 
 ["vehiclesCivBoat", [
-    "C_Boat_Civil_01_rescue_F", 0.1            // motorboats
-    ,"C_Boat_Civil_01_police_F", 0.1
-    ,"C_Boat_Civil_01_F", 1.0
-    ,"C_Rubberboat", 1.0                    // rescue boat
-    ,"C_Boat_Transport_02_F", 1.0            // RHIB
-    ,"C_Scooter_Transport_01_F", 0.5]] call _fnc_saveToTemplate;
+    "C_Scooter_Transport_01_F", 0.5]] call _fnc_saveToTemplate;
 
 ["vehiclesCivRepair", [
-    "C_Offroad_01_repair_F", 0.3
-    ,"C_Van_02_service_F", 0.3                // orange
-    ,"C_Truck_02_box_F", 0.1]] call _fnc_saveToTemplate;
+    "C_Truck_02_box_F", 0.1]] call _fnc_saveToTemplate;
 
-["vehiclesCivMedical", ["C_Van_02_medevac_F", 0.1]] call _fnc_saveToTemplate;
+["vehiclesCivMedical", [
+    "C_Van_02_medevac_F", 0.1]] call _fnc_saveToTemplate;
 
 ["vehiclesCivFuel", [
-    "C_Van_01_fuel_F", 0.2
-    ,"C_Truck_02_fuel_F", 0.1]] call _fnc_saveToTemplate;
+    "C_Truck_02_fuel_F", 0.1]] call _fnc_saveToTemplate;
 
-["vehiclesCivHeli", ["C_Heli_Light_01_civil_F"]] call _fnc_saveToTemplate;
+["vehiclesCivHeli", [
+    "C_Heli_Light_01_civil_F"]] call _fnc_saveToTemplate;
 
 //////////////////////////
 //       Loadouts       //
 //////////////////////////
 
 private _civUniforms = [
-    "U_C_Man_casual_1_F"
-];
+    "U_NORTH_CIV_Jacket_1",
+    "U_NORTH_CIV_Jacket_2",
+    "U_NORTH_CIV_Jacket_3",
+    "U_NORTH_CIV_Jacket_4",
+    "U_NORTH_CIV_Jacket_5",
+    "U_NORTH_CIV_Jacket_6",
+    "U_NORTH_CIV_Jacket_7",
+    "U_NORTH_CIV_Jacket_8",
+    "U_NORTH_CIV_Jacket_9",
+    "U_NORTH_CIV_Jacket_10"
+    ];
 
 private _pressUniforms = [
-    "U_C_Journalist"
+    "U_NORTH_CIV_Suit_1",
+    "U_NORTH_CIV_Suit_2",
+    "U_NORTH_CIV_Suit_3",
+    "U_NORTH_CIV_Suit_4",
+    "U_NORTH_CIV_Suit_5",
+    "U_NORTH_CIV_Suit_6",
+    "U_NORTH_CIV_Suit_7",
+    "U_NORTH_CIV_Suit_8",
+    "U_NORTH_CIV_Suit_9",
+    "U_NORTH_CIV_Suit_10",
+    "U_NORTH_CIV_Suit_11",
+    "U_NORTH_CIV_Suit_12"
     ];
 
 private _workerUniforms = [
-    "U_C_Uniform_Farmer_01_F"
+    "U_NORTH_CIV_Wool_1",
+    "U_NORTH_CIV_Wool_3",
+    "U_NORTH_CIV_Wool_4",
+    "U_NORTH_CIV_Wool_5",
+    "U_NORTH_CIV_Wool_7"
     ];
 
 
 ["uniforms", _civUniforms + _pressUniforms + _workerUniforms] call _fnc_saveToTemplate;
 
 private _civhats = [
+    "H_NORTH_Flatcap_Be",
+    "H_NORTH_Flatcap_Be",
+    "H_NORTH_Flatcap_Bl",
+    "H_NORTH_Flatcap_B",
+    "H_NORTH_Flatcap",
+    "H_NORTH_Flatcap_G",
+    "H_NORTH_Flatcap_Gr",
+    "H_NORTH_Workercap_Be",
+    "H_NORTH_Workercap_Bl",
+    "H_NORTH_Workercap",
+    "H_NORTH_Workercap_G",
+    "H_NORTH_Workercap_R"
+    ];
 
-];
 
 ["headgear", _civHats] call _fnc_saveToTemplate;
-
 private _loadoutData = call _fnc_createLoadoutData;
-
 _loadoutData set ["uniforms", _civUniforms];
 _loadoutData set ["pressUniforms", _pressUniforms];
 _loadoutData set ["workerUniforms", _workerUniforms];
-_loadoutData set ["pressVests", ["V_Press_F"]];
+_loadoutData set ["pressVests", []];
 _loadoutData set ["helmets", _civHats];
-private _pressHelmets = if (_hasLawsOfWar) then {
-    ["H_Cap_press", "H_PASGT_basic_blue_press_F", "H_PASGT_neckprot_blue_press_F"];
-} else {
-    ["H_Cap_press"];
-};
-_loadoutData set ["pressHelmets", _pressHelmets];
 
+
+private _pressHelmets = [
+    "H_NORTH_Fedora",
+    "H_NORTH_Fedora_B1",
+    "H_NORTH_Fedora_B2"
+    ];
+
+
+_loadoutData set ["pressHelmets", _pressHelmets];
 _loadoutData set ["maps", ["ItemMap"]];
-_loadoutData set ["watches", ["ItemWatch"]];
-_loadoutData set ["compasses", ["ItemCompass"]];
+_loadoutData set ["watches", ["NORTH_FIN_Watch"]];
+_loadoutData set ["compasses", ["NORTH_FIN_Compass"]];
 
 
 private _manTemplate = {

@@ -71,9 +71,9 @@ private _vehiclesBlackMarket = [
 ///////////////////////////
 
 private _initialRebelEquipment = [
-    "GLIB_FIN_M39",
-    "GLIB_FIN_5Rnd_762x54mm",
-    "V_LIB_SOV_RA_MosinBelt",
+    "NORTH_fin_M27",
+    "NORTH_5Rnd_m39_mag",
+    "V_NORTH_FIN_Officer_1",
     "H_LIB_FIN_Sotilas_GERCapGris1"
 ];
 
@@ -85,20 +85,23 @@ private _civilianBackpacks =  [
 
 _initialRebelEquipment append _civilianBackpacks;
 
+//TFAR Setup
 if (A3A_hasTFAR) then {_initialRebelEquipment append ["tf_microdagr","tf_anprc154"]};
 if (A3A_hasTFAR && startWithLongRangeRadio) then {_initialRebelEquipment append ["tf_anprc155","tf_anprc155_coyote"]};
 if (A3A_hasTFARBeta) then {_initialRebelEquipment append ["TFAR_microdagr","TFAR_anprc154"]};
 if (A3A_hasTFARBeta && startWithLongRangeRadio) then {_initialRebelEquipment append ["TFAR_anprc155","TFAR_anprc155_coyote"]};
 ["initialRebelEquipment", _initialRebelEquipment] call _fnc_saveToTemplate;
 
+//Uniforms
 private _rebUniforms = [
-    "U_LIB_FIN_Sotilas_g1vg1pSotaM39"
+    "U_NORTH_FIN_M36_Uniform_Private_3"
 ];
 
 ["uniforms", _rebUniforms] call _fnc_saveToTemplate;
 
+//Headgear
 ["headgear", [
-    "H_Cap_headphones"
+    "H_NORTH_FIN_M36_fieldcap_armoreddiv"
 ]] call _fnc_saveToTemplate;
 
 /////////////////////
@@ -116,15 +119,15 @@ private _rebUniforms = [
 
 private _loadoutData = call _fnc_createLoadoutData;
 _loadoutData set ["maps", ["ItemMap"]];
-_loadoutData set ["watches", ["ItemWatch"]];
-_loadoutData set ["compasses", ["ItemCompass"]];
-_loadoutData set ["binoculars", ["Binocular"]];
+_loadoutData set ["watches", ["NORTH_FIN_Watch"]];
+_loadoutData set ["compasses", ["NORTH_FIN_Compass"]];
+_loadoutData set ["binoculars", ["NORTH_Binocular_Zeiss"]];
 
 _loadoutData set ["uniforms", _rebUniforms];
 
-_loadoutData set ["glasses", ["G_Shades_Black", "G_Shades_Blue", "G_Shades_Green", "G_Shades_Red", "G_Aviator", "G_Spectacles", "G_Spectacles_Tinted", "G_Sport_BlackWhite", "G_Sport_Blackyellow", "G_Sport_Greenblack", "G_Sport_Checkered", "G_Sport_Red", "G_Squares", "G_Squares_Tinted"]];
+_loadoutData set ["glasses", ["G_Shades_Black"]];
 _loadoutData set ["goggles", ["G_Lowprofile"]];
-_loadoutData set ["facemask", ["G_Bandanna_blk", "G_Bandanna_oli", "G_Bandanna_khk", "G_Bandanna_tan", "G_Bandanna_beast", "G_Bandanna_shades", "G_Bandanna_sport", "G_Bandanna_aviator"]];
+_loadoutData set ["facemask", ["G_Bandanna_blk"]];
 
 _loadoutData set ["items_medical_basic", ["BASIC"] call A3A_fnc_itemset_medicalSupplies];
 _loadoutData set ["items_medical_standard", ["STANDARD"] call A3A_fnc_itemset_medicalSupplies];
