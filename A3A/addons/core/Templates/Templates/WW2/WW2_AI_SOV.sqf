@@ -15,7 +15,7 @@ private _hasContact = "enoch" in A3A_enabledDLC;
 
 ["flag", "Flag_CSAT_F"] call _fnc_saveToTemplate;
 ["flagTexture", "A3\Data_F\Flags\Flag_CSAT_CO.paa"] call _fnc_saveToTemplate;
-["flagMarkerType", "flag_CSAT"] call _fnc_saveToTemplate;
+["flagMarkerType", "geist_Flag_URSS01"] call _fnc_saveToTemplate;
 
 //////////////////////////
 //       Vehicles       //

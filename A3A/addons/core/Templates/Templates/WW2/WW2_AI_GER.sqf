@@ -7,7 +7,7 @@
 
 ["flag", "Flag_NATO_F"] call _fnc_saveToTemplate;
 ["flagTexture", "\A3\Data_F\Flags\Flag_NATO_CO.paa"] call _fnc_saveToTemplate;
-["flagMarkerType", "flag_NATO"] call _fnc_saveToTemplate;
+["flagMarkerType", "geist_Flag_3Rs3"] call _fnc_saveToTemplate;
 
 //////////////////////////
 //       Vehicles       //
@@ -97,8 +97,15 @@
 ///  Identities   ///
 /////////////////////
 //Faces and Voices given to AI Factions.
-["faces", []] call _fnc_saveToTemplate;
-["voices", []] call _fnc_saveToTemplate;
+["faces", ["NORTH_WhiteHead_01","NORTH_WhiteHead_02","NORTH_WhiteHead_03",
+"NORTH_WhiteHead_04","NORTH_WhiteHead_05","NORTH_WhiteHead_06",
+"NORTH_WhiteHead_07","NORTH_WhiteHead_08","NORTH_WhiteHead_09",
+"NORTH_WhiteHead_10","NORTH_WhiteHead_11","NORTH_WhiteHead_12",
+"NORTH_WhiteHead_13","NORTH_WhiteHead_14","NORTH_WhiteHead_15",
+"NORTH_WhiteHead_16","NORTH_WhiteHead_17","NORTH_WhiteHead_18",
+"NORTH_WhiteHead_19","NORTH_WhiteHead_20"]] call _fnc_saveToTemplate;
+["voices", ["Male01Ger", "Male02Ger", "Male03Ger", "Male04Ger", "Male05Ger", "Male06Ger"]] call _fnc_saveToTemplate;
+
 //SpecialForces, Militia, Police Faces and Voices, these are Optional if there is no reason to Include them, leave them out.
 ["sfVoices", []] call _fnc_saveToTemplate;
 ["sfFaces", []] call _fnc_saveToTemplate;
@@ -140,20 +147,20 @@ _loadoutData set ["APMines", []];
 _loadoutData set ["lightExplosives", []];
 _loadoutData set ["heavyExplosives", []];
 
-_loadoutData set ["antiInfantryGrenades", []];
-_loadoutData set ["smokeGrenades", []];
-_loadoutData set ["signalsmokeGrenades", []];
+_loadoutData set ["antiInfantryGrenades", ["fow_e_m24", "fow_e_m24_spli"]];
+_loadoutData set ["smokeGrenades", ["fow_e_nb39b"]];
+_loadoutData set ["signalsmokeGrenades", ["fow_e_nb39b"]];
 
 
 //Basic equipment. Shouldn't need touching most of the time.
 //Mods might override this, or certain mods might want items removed (No GPSs in WW2, for example)
 _loadoutData set ["maps", ["ItemMap"]];
-_loadoutData set ["watches", ["ItemWatch"]];
-_loadoutData set ["compasses", ["ItemCompass"]];
+_loadoutData set ["watches", ["LIB_GER_ItemWatch"]];
+_loadoutData set ["compasses", ["LIB_GER_ItemCompass_deg"]];
 _loadoutData set ["radios", ["ItemRadio"]];
 _loadoutData set ["gpses", []];
 _loadoutData set ["NVGs", []];
-_loadoutData set ["binoculars", ["Binocular"]];
+_loadoutData set ["binoculars", ["fow_i_dienstglas"]];
 _loadoutData set ["rangefinders", []];
 
 _loadoutData set ["traitorUniforms", []];
@@ -195,8 +202,8 @@ _loadoutData set ["items_police_extras", []];
 _loadoutData set ["items_crew_extras", []];
 _loadoutData set ["items_unarmed_extras", []];
 
-_loadoutData set ["glasses", []];
-_loadoutData set ["goggles", []];
+_loadoutData set ["glasses", ["fow_g_gloves4"]];
+_loadoutData set ["goggles", ["fow_g_gloves4"]];
 
 //TODO - ACE overrides for misc essentials, medical and engineer gear
 
@@ -209,7 +216,7 @@ _sfLoadoutData set ["uniforms", []];
 _sfLoadoutData set ["vests", []];
 _sfLoadoutData set ["backpacks", []];
 _sfLoadoutData set ["helmets", []];
-_sfLoadoutData set ["binoculars", []];
+_sfLoadoutData set ["binoculars", ["fow_i_dienstglas"]];
 //["Weapon", "Muzzle", "Rail", "Sight", [], [], "Bipod"];
 
 _sfLoadoutData set ["rifles", [
@@ -232,37 +239,86 @@ _sfLoadoutData set ["sniperRifles", [
 ["GLIB_FIN_M39", "", "", "", ["GLIB_FIN_5Rnd_762x54mm"], [], ""]
 ]];
 _sfLoadoutData set ["sidearms", []];
+
+/////////////////////////////////
+//    Elite Loadout Data       //
+/////////////////////////////////
+
+private _eliteLoadoutData = _loadoutData call _fnc_copyLoadoutData;
+_eliteLoadoutData set ["uniforms", []];
+_eliteLoadoutData set ["vests", []];
+_eliteLoadoutData set ["SLvests", []];
+_eliteLoadoutData set ["MEDvests", []];
+_eliteLoadoutData set ["backpacks", []];
+_eliteLoadoutData set ["medBackpacks", []];
+_eliteLoadoutData set ["atBackpacks", []];
+_eliteLoadoutData set ["helmets", []];
+_eliteLoadoutData set ["NVGs", []];
+_eliteLoadoutData set ["binoculars", []];
+_eliteLoadoutData set ["antiInfantryGrenades", []];
+_eliteLoadoutData set ["lightATLaunchers", []];
+_eliteLoadoutData set ["lightHELaunchers", []];
+_eliteLoadoutData set ["ATLaunchers", []];
+
+_eliteLoadoutData set ["slRifles", [
+
+]];
+
+_eliteLoadoutData set ["rifles", [
+
+]];
+_eliteLoadoutData set ["carbines", [
+
+]];
+_eliteLoadoutData set ["grenadeLaunchers", [
+
+]];
+_eliteLoadoutData set ["machineGuns", [
+
+]];
+_eliteLoadoutData set ["marksmanRifles", [
+
+]];
+_eliteLoadoutData set ["sniperRifles", [
+
+]];
+_eliteLoadoutData set ["sidearms", []];
+
 /////////////////////////////////
 //    Military Loadout Data    //
 /////////////////////////////////
 
 private _militaryLoadoutData = _loadoutData call _fnc_copyLoadoutData;
 _militaryLoadoutData set ["uniforms", ["U_LIB_GER_rifleman_HeerGrsDldSchkK98"]];
-_militaryLoadoutData set ["vests", ["V_LIB_GER_VestKar98_8a"]];
-_militaryLoadoutData set ["backpacks", ["B_LIB_GER_A_frame_Vide"]];
-_militaryLoadoutData set ["helmets", ["H_LIB_GER_Helmet_os"]];
-_militaryLoadoutData set ["binoculars", []];
+_militaryLoadoutData set ["vests", ["V_LIB_GER_VestKar98_8a", "V_LIB_GER_VestKar98_9b"]];
+_militaryLoadoutData set ["backpacks", ["B_LIB_GER_A_frame"]];
+_militaryLoadoutData set ["helmets", ["fow_h_ger_m42_heer_01"]];
+_militaryLoadoutData set ["binoculars", ["fow_i_dienstglas"]];
 
 _militaryLoadoutData set ["rifles", [
-["GLIB_FIN_M39", "", "", "", ["GLIB_FIN_5Rnd_762x54mm"], [], ""]
+["fow_w_k98", "", "", "", ["LIB_5Rnd_792x57"], [], ""]
 ]];
 _militaryLoadoutData set ["carbines", [
-["GLIB_FIN_M39", "", "", "", ["GLIB_FIN_5Rnd_762x54mm"], [], ""]
+["fow_w_k98", "", "", "", ["LIB_5Rnd_792x57"], [], ""]
 ]];
-_militaryLoadoutData set ["grenadeLaunchers", []];
+_militaryLoadoutData set ["grenadeLaunchers", [
+["fow_w_k98", "", "", "", ["LIB_5Rnd_792x57"], [], ""]
+]];
 _militaryLoadoutData set ["SMGs", [
-["GLIB_FIN_M39", "", "", "", ["GLIB_FIN_5Rnd_762x54mm"], [], ""]
+["fow_w_k98", "", "", "", ["LIB_5Rnd_792x57"], [], ""]
 ]];
 _militaryLoadoutData set ["machineGuns", [
-["GLIB_FIN_M39", "", "", "", ["GLIB_FIN_5Rnd_762x54mm"], [], ""]
+["fow_w_k98", "", "", "", ["LIB_5Rnd_792x57"], [], ""]
 ]];
 _militaryLoadoutData set ["marksmanRifles", [
-["GLIB_FIN_M39", "", "", "", ["GLIB_FIN_5Rnd_762x54mm"], [], ""]
+["fow_w_k98", "", "", "", ["LIB_5Rnd_792x57"], [], ""]
 ]];
 _militaryLoadoutData set ["sniperRifles", [
-["GLIB_FIN_M39", "", "", "", ["GLIB_FIN_5Rnd_762x54mm"], [], ""]
+["fow_w_k98", "", "", "", ["LIB_5Rnd_792x57"], [], ""]
 ]];
-_militaryLoadoutData set ["sidearms", []];
+_militaryLoadoutData set ["sidearms", [
+["fow_w_p08","","","",["fow_8Rnd_9x19",8],[],""]
+]];
 
 ///////////////////////////////
 //    Police Loadout Data    //
@@ -270,42 +326,52 @@ _militaryLoadoutData set ["sidearms", []];
 
 private _policeLoadoutData = _loadoutData call _fnc_copyLoadoutData;
 
-_policeLoadoutData set ["uniforms", []];
-_policeLoadoutData set ["vests", []];
-_policeLoadoutData set ["helmets", []];
+_policeLoadoutData set ["uniforms", ["U_LIB_GER_Officer_SSUstufabMP40", "U_LIB_GER_Rifleman_SSOmnnG43", "U_LIB_GER_Rifleman_SSMnnK98"]];
+_policeLoadoutData set ["vests", ["V_LIB_GER_OfficerVestBlack_0A", "V_LIB_GER_VestG43_0b", "V_LIB_GER_VestKar98_0b"]];
+_policeLoadoutData set ["helmets", ["H_LIB_GER_OfficerCap_SS", "H_LIB_GER_Helmet_SSbT1"]];
 
 _policeLoadoutData set ["SMGs", [
-["LIB_K98", "", "", "", ["LIB_5Rnd_792x57"], [], ""]
+["lib_Mp35", "", "", "", ["lib_32Rnd_9x19_MP35"], [], ""],
+["LIB_G43","","","",["LIB_10Rnd_792x57",10],[],""],
+["LIB_K98","","","",["LIB_5Rnd_792x57",5],[],""],
+["lib_Mp28","","","",["lib_32Rnd_9x19_MP28",32],[],""],
+["lib_Mp18","","","",["lib_32Rnd_9x19_MP18",32],[],""]
 ]];
-_policeLoadoutData set ["sidearms", []];
+_policeLoadoutData set ["sidearms", [
+["fow_w_p08","","","",["fow_8Rnd_9x19",8],[],""]
+]];
 
 ////////////////////////////////
 //    Militia Loadout Data    //
 ////////////////////////////////
 
 private _militiaLoadoutData = _loadoutData call _fnc_copyLoadoutData;
-_militiaLoadoutData set ["uniforms", ["U_LIB_GER_rifleman_HeerGrsDldSchkK98"]];
-_militiaLoadoutData set ["vests", ["V_LIB_GER_VestKar98_8a"]];
-_militiaLoadoutData set ["backpacks", ["B_LIB_GER_Radio_ACRE2"]];
-_militiaLoadoutData set ["helmets", ["H_LIB_GER_Helmet_os"]];
+_militiaLoadoutData set ["uniforms", ["U_LIB_GER_rifleman_HeerGebSchjG3340"]];
+_militiaLoadoutData set ["vests", ["V_LIB_GER_VestKar98_8a", "V_LIB_GER_VestKar98_9b"]];
+_militiaLoadoutData set ["backpacks", ["B_LIB_GER_A_frame"]];
+_militiaLoadoutData set ["helmets", ["fow_h_ger_m42_heer_01"]];
 
 _militiaLoadoutData set ["rifles", [
-["LIB_K98", "", "", "", ["LIB_5Rnd_792x57"], [], ""]
+["fow_w_k98", "", "", "", ["LIB_5Rnd_792x57"], [], ""]
 ]];
 _militiaLoadoutData set ["carbines", [
-["LIB_K98", "", "", "", ["LIB_5Rnd_792x57"], [], ""]
+["fow_w_k98", "", "", "", ["LIB_5Rnd_792x57"], [], ""]
 ]];
-_militiaLoadoutData set ["grenadeLaunchers", []];
+_militiaLoadoutData set ["grenadeLaunchers", [
+["fow_w_k98", "", "", "", ["LIB_5Rnd_792x57"], [], ""]
+]];
 _militiaLoadoutData set ["SMGs", [
-["LIB_K98", "", "", "", ["LIB_5Rnd_792x57"], [], ""]
+["fow_w_k98", "", "", "", ["LIB_5Rnd_792x57"], [], ""]
 ]];
 _militiaLoadoutData set ["machineGuns", [
-["LIB_K98", "", "", "", ["LIB_5Rnd_792x57"], [], ""]
+["fow_w_k98", "", "", "", ["LIB_5Rnd_792x57"], [], ""]
 ]];
 _militiaLoadoutData set ["marksmanRifles", [
-["LIB_K98", "", "", "", ["LIB_5Rnd_792x57"], [], ""]
+["fow_w_k98", "", "", "", ["LIB_5Rnd_792x57"], [], ""]
 ]];
-_militiaLoadoutData set ["sidearms", []];
+_militiaLoadoutData set ["sidearms", [
+["fow_w_p08","","","",["fow_8Rnd_9x19",8],[],""]
+]];
 
 //////////////////////////
 //    Misc Loadouts     //
@@ -370,7 +436,7 @@ private _squadLeaderTemplate = {
     [["Hvests", "vests"] call _fnc_fallback] call _fnc_setVest;
     [["slUniforms", "uniforms"] call _fnc_fallback] call _fnc_setUniform;
 
-    ["backpacks"] call _fnc_setBackpack;
+    ["B_LIB_GER_Radio_ACRE2"] call _fnc_setBackpack;
 
     [["slRifles", "rifles"] call _fnc_fallback] call _fnc_setPrimary;
     ["primary", 6] call _fnc_addMagazines;

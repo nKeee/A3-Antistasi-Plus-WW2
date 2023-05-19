@@ -8,7 +8,7 @@
 
 ["flag", "Flag_FIA_F"] call _fnc_saveToTemplate;
 ["flagTexture", "a3\data_f\flags\flag_fia_co.paa"] call _fnc_saveToTemplate;
-["flagMarkerType", "flag_FIA"] call _fnc_saveToTemplate;
+["flagMarkerType", "geist_Flag_FINEtat"] call _fnc_saveToTemplate;
 
 ["vehicleBasic", "I_G_Quadbike_01_F"] call _fnc_saveToTemplate;
 ["vehicleLightUnarmed", "I_G_Offroad_01_F"] call _fnc_saveToTemplate;
@@ -71,14 +71,46 @@ private _vehiclesBlackMarket = [
 ///////////////////////////
 
 private _initialRebelEquipment = [
+    //Weapons
     "NORTH_fin_M27",
+    "NORTH_fin_M28",
+    "NORTH_fin_M9130",
+    "NORTH_l35",
+    "NORTH_valopistoolim94",
+    //Ammo
     "NORTH_5Rnd_m39_mag",
-    "V_NORTH_FIN_Officer_1",
-    "H_LIB_FIN_Sotilas_GERCapGris1"
+    "NORTH_8Rnd_l35_mag",
+    "NORTH_1Rnd_flare_white_mag",
+    "NORTH_1Rnd_flare_red_mag",
+    "NORTH_1Rnd_flare_green_mag",
+    //Grenades
+    "NORTH_molotov",
+    //Vests
+    "V_NORTH_FIN_Rifleman_1","V_NORTH_FIN_Rifleman_2","V_NORTH_FIN_Rifleman_3","V_NORTH_FIN_Rifleman_4",
+    "V_NORTH_FIN_Rifleman_5","V_NORTH_FIN_Rifleman_6","V_NORTH_FIN_Rifleman_7","V_NORTH_FIN_Rifleman_8",
+    "V_NORTH_FIN_Rifleman_9","V_NORTH_FIN_Rifleman_10","V_NORTH_FIN_Rifleman_11","V_NORTH_FIN_Rifleman_12",
+    "V_NORTH_FIN_LMG_1","V_NORTH_FIN_LMG_2","V_NORTH_FIN_LMG_A",
+    "V_NORTH_FIN_Generic_1","V_NORTH_FIN_Generic_2","V_NORTH_FIN_Generic_3","V_NORTH_FIN_Generic_4",
+    "V_NORTH_FIN_Generic_5","V_NORTH_FIN_Generic_6","V_NORTH_FIN_Assault_1","V_NORTH_FIN_Assault_2",
+    "V_NORTH_FIN_Assault_3","V_NORTH_FIN_Assault_4","V_NORTH_FIN_Assault_5","V_NORTH_FIN_Assault_6",
+    "V_NORTH_FIN_Assault_7","V_NORTH_FIN_Assault_8","V_NORTH_FIN_Assault_9",
+    "V_NORTH_FIN_Pioneer_1","V_NORTH_FIN_Pioneer_2",
+    "V_NORTH_FIN_Pioneer_Assault_1","V_NORTH_FIN_Pioneer_Assault_2","V_NORTH_FIN_Pioneer_Assault_3","V_NORTH_FIN_Pioneer_Assault_4",
+    "V_NORTH_FIN_Officer_1","V_NORTH_FIN_Officer_2","V_NORTH_FIN_Officer_3","V_NORTH_FIN_Officer_4","V_NORTH_FIN_Officer_5",
+    "V_NORTH_FIN_Officer_Assault_1","V_NORTH_FIN_Officer_Assault_2","V_NORTH_FIN_Officer_Assault_3",
+    "V_NORTH_FIN_Officer_Assault_4","V_NORTH_FIN_Officer_Assault_5","V_NORTH_FIN_Officer_Pioneer_1",
+    "V_NORTH_FIN_Officer_Pioneer_2","V_NORTH_FIN_Officer_Pioneer_3",
+    //Backpacks
+    "NORTH_fin_MolotovBag",
+    //Gear
+    "G_LIB_Binoculars",
+    "NORTH_Binocular_Zeiss",
+    "NORTH_FIN_Compass",
+    "NORTH_FIN_Watch"
 ];
 
 private _civilianBackpacks =  [
-    "B_FieldPack_blk"
+    "NORTH_fin_MapBag"
 ];
 
 ["civilianBackpacks", _civilianBackpacks createHashMapFromArray []] call _fnc_saveToTemplate;
@@ -94,24 +126,57 @@ if (A3A_hasTFARBeta && startWithLongRangeRadio) then {_initialRebelEquipment app
 
 //Uniforms
 private _rebUniforms = [
-    "U_NORTH_FIN_M36_Uniform_Private_3"
+    "U_NORTH_FIN_M36_Uniform_JGR_Private",
+    "U_NORTH_FIN_M36_Uniform_JGR_Private_2",
+    "U_NORTH_FIN_M36_Uniform_JGR_CPL",
+    "U_NORTH_FIN_M36_Uniform_JGR_SGT",
+    "U_NORTH_FIN_M36_Uniform_JGR_SSGT",
+    "U_NORTH_FIN_M36_Uniform_JGR_SGTMAJ",
+    "U_NORTH_FIN_M36_Uniform_JGR_2NDLT",
+    "U_NORTH_FIN_M36_Uniform_JGR_1stLT",
+    "U_NORTH_FIN_M36_Uniform_JGR_CPT",
+    "U_NORTH_FIN_M36_Greatcoat_Private",
+    "U_NORTH_FIN_M36_Greatcoat_CPL",
+    "U_NORTH_FIN_M36_Greatcoat_SGT",
+    "U_NORTH_FIN_M36_Greatcoat_SSGT",
+    "U_NORTH_FIN_M36_Greatcoat_SGTMAJ",
+    "U_NORTH_FIN_M36_Greatcoat_2NDLT",
+    "U_NORTH_FIN_M36_Greatcoat_1stLT",
+    "U_NORTH_FIN_M36_Greatcoat_CPT"
 ];
 
 ["uniforms", _rebUniforms] call _fnc_saveToTemplate;
 
 //Headgear
 ["headgear", [
-    "H_NORTH_FIN_M36_fieldcap_armoreddiv"
+    "H_NORTH_FIN_M39_furhat",
+    "H_NORTH_FIN_M39_furhat_2",
+    "H_NORTH_FIN_M39_furhat_3",
+    "H_NORTH_FIN_M39_furhat_4",
+    "H_NORTH_FIN_M39_furhat_5",
+    "H_NORTH_FIN_M39_furhat_open",
+    "H_NORTH_FIN_M39_furhat_open_2",
+    "H_NORTH_FIN_M39_furhat_fancy_officer",
+    "H_NORTH_FIN_M39_furhat_fancy_officer_2",
+    "H_NORTH_FIN_M36_fieldcap",
+    "H_NORTH_FIN_M36_fieldcap_early",
+    "H_NORTH_FIN_M36_fieldcap_early_2",
+    "H_NORTH_FIN_M36_fieldcap_worn_headphones"
 ]] call _fnc_saveToTemplate;
 
 /////////////////////
 ///  Identities   ///
 /////////////////////
 
-["faces", ["GreekHead_A3_02","GreekHead_A3_03","GreekHead_A3_04",
-"GreekHead_A3_05","GreekHead_A3_06","GreekHead_A3_07","GreekHead_A3_08",
-"GreekHead_A3_09","Ioannou","Mavros"]] call _fnc_saveToTemplate;
-["voices", ["Male01GRE", "Male02GRE", "Male03GRE", "Male04GRE", "Male05GRE", "Male06GRE"]] call _fnc_saveToTemplate;
+["faces", ["NORTH_WhiteHead_01","NORTH_WhiteHead_02","NORTH_WhiteHead_03",
+"NORTH_WhiteHead_04","NORTH_WhiteHead_05","NORTH_WhiteHead_06",
+"NORTH_WhiteHead_07","NORTH_WhiteHead_08","NORTH_WhiteHead_09",
+"NORTH_WhiteHead_10","NORTH_WhiteHead_11","NORTH_WhiteHead_12",
+"NORTH_WhiteHead_13","NORTH_WhiteHead_14","NORTH_WhiteHead_15",
+"NORTH_WhiteHead_16","NORTH_WhiteHead_17","NORTH_WhiteHead_18",
+"NORTH_WhiteHead_19","NORTH_WhiteHead_20"]] call _fnc_saveToTemplate;
+["voices", ["Male01FIN_FDF", "Male02FIN_FDF", "Male03FIN_FDF", "Male04FIN_FDF", "Male05FIN_FDF", "Male06FIN_FDF", "Male07FIN_FDF",
+"Male08FIN_FDF", "Male09FIN_FDF"]] call _fnc_saveToTemplate;
 
 //////////////////////////
 //       Loadouts       //

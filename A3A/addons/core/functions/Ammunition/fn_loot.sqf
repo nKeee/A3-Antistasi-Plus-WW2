@@ -3,7 +3,7 @@ FIX_LINE_NUMBERS()
 //////////////////
 // Basic Items ///
 //////////////////
-lootBasicItem append allMaps + allToolkits + allWatches + allCompasses + allMedikits + allFirstAidKits;
+lootBasicItem append allMaps + allToolkits + allMedikits + allFirstAidKits;
 
 /////////////////
 //    NVG'S   ///
@@ -83,7 +83,8 @@ private _initialEquipment = FactionGet(reb,"initialRebelEquipment");
 _initialEquipment append lootBasicItem;
 _initialEquipment append (A3A_faction_reb get "uniforms");
 _initialEquipment append (A3A_faction_civ get "uniforms");
-_initialEquipment append allCosmeticHeadgear;
+_initialEquipment append (A3A_faction_civ get "headgear");
+_initialEquipment append (A3A_faction_civ get "pressHelmets");
 _initialEquipment append allCosmeticGlasses;
 _initialEquipment append FactionGet(reb,"uniforms");
 _initialEquipment append FactionGet(reb,"headgear");

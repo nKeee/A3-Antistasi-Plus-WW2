@@ -66,6 +66,14 @@ allCosmeticHeadgear deleteAt (allCosmeticHeadgear find "H_Beret_Colonel");
 allCosmeticHeadgear deleteAt (allCosmeticHeadgear find "H_Beret_02");
 allCosmeticHeadgear deleteAt (allCosmeticHeadgear find "H_Beret_CSAT_01_F");
 
+if ("worldWar2" in A3A_factionEquipFlags) then {
+	{
+		allCosmeticHeadgear deleteAt (allCosmeticHeadgear find _x);
+	} forEach [
+		"vn_o_cap_navy_01", "vn_o_helmet_shl61_01", "vn_o_helmet_shl61_02"
+	];
+};
+
 if ("specialVN" in A3A_factionEquipFlags) then {
 	{
 		allCosmeticHeadgear deleteAt (allCosmeticHeadgear find _x);
@@ -139,6 +147,15 @@ allCosmeticGlasses deleteAt (allCosmeticGlasses find "G_Balaclava_TI_G_blk_F");
 allCosmeticGlasses deleteAt (allCosmeticGlasses find "G_Balaclava_TI_G_tna_F");
 
 if ("specialVN" in A3A_factionEquipFlags) then {
+	{
+		allCosmeticGlasses deleteAt (allCosmeticGlasses find _x);
+	} forEach [
+		"vn_b_acc_seal_01", "vn_o_acc_goggles_02", "vn_o_acc_goggles_03",
+		"vn_o_acc_km32_01", "vn_b_acc_ms22001_01", "vn_b_acc_ms22001_02"
+	];
+};
+
+if ("worldWar2" in A3A_factionEquipFlags) then {
 	{
 		allCosmeticGlasses deleteAt (allCosmeticGlasses find _x);
 	} forEach [

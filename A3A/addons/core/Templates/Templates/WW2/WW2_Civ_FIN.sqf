@@ -11,7 +11,9 @@ private _hasApex = "expansion" in A3A_enabledDLC;
 //////////////////////////
 
 private _civCarsWithWeights = [
-    "LIB_GazM1_dirty", 1.0
+    "LIB_GazM1_dirty", 0.3,
+    "LIB_FRA_CitC4Ferme", 0.3,
+    "LIB_FRA_CitC4", 0.3
 ];
 
 ["vehiclesCivCar", _civCarsWithWeights] call _fnc_saveToTemplate;
@@ -30,7 +32,7 @@ private _civCarsWithWeights = [
     "C_Van_02_medevac_F", 0.1]] call _fnc_saveToTemplate;
 
 ["vehiclesCivFuel", [
-    "C_Truck_02_fuel_F", 0.1]] call _fnc_saveToTemplate;
+    "NORTH_FIN_41_FordV8_Fuel", 0.1]] call _fnc_saveToTemplate;
 
 ["vehiclesCivHeli", [
     "C_Heli_Light_01_civil_F"]] call _fnc_saveToTemplate;
@@ -44,12 +46,7 @@ private _civUniforms = [
     "U_NORTH_CIV_Jacket_2",
     "U_NORTH_CIV_Jacket_3",
     "U_NORTH_CIV_Jacket_4",
-    "U_NORTH_CIV_Jacket_5",
-    "U_NORTH_CIV_Jacket_6",
-    "U_NORTH_CIV_Jacket_7",
-    "U_NORTH_CIV_Jacket_8",
-    "U_NORTH_CIV_Jacket_9",
-    "U_NORTH_CIV_Jacket_10"
+    "U_NORTH_CIV_Jacket_5"
     ];
 
 private _pressUniforms = [
@@ -70,27 +67,32 @@ private _pressUniforms = [
 private _workerUniforms = [
     "U_NORTH_CIV_Wool_1",
     "U_NORTH_CIV_Wool_3",
-    "U_NORTH_CIV_Wool_4",
-    "U_NORTH_CIV_Wool_5",
-    "U_NORTH_CIV_Wool_7"
+    "U_NORTH_CIV_Jacket_6",
+    "U_NORTH_CIV_Jacket_7",
+    "U_NORTH_CIV_Jacket_8",
+    "U_NORTH_CIV_Jacket_9",
+    "U_NORTH_CIV_Jacket_10",
+    "U_GELIB_FRA_Schoolteacher"
     ];
 
 
 ["uniforms", _civUniforms + _pressUniforms + _workerUniforms] call _fnc_saveToTemplate;
 
 private _civhats = [
-    "H_NORTH_Flatcap_Be",
-    "H_NORTH_Flatcap_Be",
-    "H_NORTH_Flatcap_Bl",
-    "H_NORTH_Flatcap_B",
-    "H_NORTH_Flatcap",
-    "H_NORTH_Flatcap_G",
-    "H_NORTH_Flatcap_Gr",
-    "H_NORTH_Workercap_Be",
-    "H_NORTH_Workercap_Bl",
-    "H_NORTH_Workercap",
-    "H_NORTH_Workercap_G",
-    "H_NORTH_Workercap_R"
+    "H_LIB_CIV_Worker_Cap_4",
+    "H_LIB_CIV_Villager_Cap_1",
+    "H_LIB_CIV_Villager_Cap_2",
+    "H_LIB_CIV_Villager_Cap_3",
+    "H_LIB_CIV_Villager_Cap_4",
+    "H_LIB_GER_Ushanka",
+    "GEH_Chapeau_Noir1",
+    "GEH_Chapeau_Noir2",
+    "GEH_Chapeau_MarronClair",
+    "GEH_Chapeau_MarronFonce",
+    "GEH_Chapeau_Brun",
+    "GEH_Beret_blk",
+    "GERDS_Beret1",
+    "GEH_Beret_blue"
     ];
 
 
@@ -104,9 +106,20 @@ _loadoutData set ["helmets", _civHats];
 
 
 private _pressHelmets = [
-    "H_NORTH_Fedora",
-    "H_NORTH_Fedora_B1",
-    "H_NORTH_Fedora_B2"
+    "H_LIB_CIV_Worker_Cap_4",
+    "H_LIB_CIV_Villager_Cap_1",
+    "H_LIB_CIV_Villager_Cap_2",
+    "H_LIB_CIV_Villager_Cap_3",
+    "H_LIB_CIV_Villager_Cap_4",
+    "H_LIB_GER_Ushanka",
+    "GEH_Chapeau_Noir1",
+    "GEH_Chapeau_Noir2",
+    "GEH_Chapeau_MarronClair",
+    "GEH_Chapeau_MarronFonce",
+    "GEH_Chapeau_Brun",
+    "GEH_Beret_blk",
+    "GERDS_Beret1",
+    "GEH_Beret_blue"
     ];
 
 
