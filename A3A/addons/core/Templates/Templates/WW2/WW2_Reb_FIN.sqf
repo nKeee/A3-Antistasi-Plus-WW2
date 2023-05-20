@@ -51,7 +51,6 @@ private _staticAA = "I_static_AA_F";
 //////////////////////////////////////
 
 //classname, price, type, availability condition
-
 private _vehiclesBlackMarket = [
     ["I_UAV_01_F", 2000, "UAV", {true}],
     ["I_LT_01_AA_F", 7500, "AA", {{sidesX getVariable [_x,sideUnknown] isEqualTo teamPlayer} count (milbases + airportsX) > 0}],
@@ -190,9 +189,9 @@ _loadoutData set ["binoculars", ["NORTH_Binocular_Zeiss"]];
 
 _loadoutData set ["uniforms", _rebUniforms];
 
-_loadoutData set ["glasses", ["G_Shades_Black"]];
-_loadoutData set ["goggles", ["G_Lowprofile"]];
-_loadoutData set ["facemask", ["G_Bandanna_blk"]];
+_loadoutData set ["glasses", ["G_NORTH_FIN_Glasses","G_NORTH_FIN_Glasses_2","fow_g_glasses4","fow_g_gloves1","fow_g_gloves2","fow_g_gloves3","fow_g_gloves4","fow_g_gloves5","fow_g_gloves6"]];
+_loadoutData set ["goggles", ["fow_g_gloves1","fow_g_gloves2","fow_g_gloves3","fow_g_gloves4","fow_g_gloves5","fow_g_gloves6"]];
+_loadoutData set ["facemask", []];
 
 _loadoutData set ["items_medical_basic", ["BASIC"] call A3A_fnc_itemset_medicalSupplies];
 _loadoutData set ["items_medical_standard", ["STANDARD"] call A3A_fnc_itemset_medicalSupplies];

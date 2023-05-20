@@ -10,40 +10,19 @@ aceItems = [
 	"ACE_Clacker",
 	"ACE_DefusalKit",
 	"ACE_MapTools",
-	"ACE_Flashlight_MX991",
 	"ACE_wirecutter",
 	"ACE_RangeTable_82mm",
 	"ACE_EntrenchingTool",
-	"ACE_Cellphone",
 	"ACE_CableTie",
-	"ACE_SpottingScope",
-	"ACE_Tripod",
-	"ACE_Spraypaintred",
-	"ACE_UAVBattery",
-	"ACE_SpareBarrel",
-	"ACE_Flashlight_XL50",
-	"ACE_HandFlare_White"
+	"ACE_Spraypaintred"
 ];
 
 aceMedItems = [
 	"ACE_fieldDressing",
-	"ACE_elasticBandage",
-	"ACE_packingBandage",
-	"ACE_quikclot",
-	"ACE_plasmaIV",
-	"ACE_plasmaIV_500",
-	"ACE_plasmaIV_250",
-	"ACE_salineIV",
-	"ACE_salineIV_500",
-	"ACE_salineIV_250",
-	"ACE_surgicalKit",
 	"ACE_tourniquet",
 	"ACE_epinephrine",
 	"ACE_morphine",
-	"ACE_adenosine",
-	"ACE_splint",
-	"ACE_bodyBag",
-	"ACE_personalAidKit"
+	"ACE_splint"
 ];
 
 aceMedItemsBlood = [
@@ -133,26 +112,10 @@ katMedItems = [
 ];
 
 aceCoolingItems = [
-	"ACE_Canteen",
-	"ACE_Canteen_Half",
-	"ACE_Canteen_Empty",
-	"ACE_WaterBottle",
-	"ACE_WaterBottle_Half",
-	"ACE_WaterBottle_Empty",
-	"ACE_Can_Franta",
-	"ACE_Can_RedGull",
-	"ACE_Can_Spirit"
+	"ACE_Canteen"
 ];
 
 aceFoodItems = [
-	"ACE_MRE_BeefStew",
-	"ACE_MRE_ChickenTikkaMasala",
-	"ACE_MRE_ChickenHerbDumplings",
-	"ACE_MRE_CreamChickenSoup",
-	"ACE_MRE_CreamTomatoSoup",
-	"ACE_MRE_LambCurry",
-	"ACE_MRE_MeatballsPasta",
-	"ACE_MRE_SteakVegetables"
 ];
 
 publicVariable "aceItems";

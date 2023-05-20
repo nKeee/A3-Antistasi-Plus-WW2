@@ -11,31 +11,73 @@ private _hasApex = "expansion" in A3A_enabledDLC;
 //////////////////////////
 
 private _civCarsWithWeights = [
-    "LIB_GazM1_dirty", 0.3,
-    "LIB_FRA_CitC4Ferme", 0.3,
-    "LIB_FRA_CitC4", 0.3
+    "fow_v_truppenfahrrad_ger_heer", 1.8,
+    "LIB_GazM1_dirty", 0.1,
+    "LIB_FRA_CitC4Ferme", 0.4,
+    "LIB_FRA_CitC4", 0.7,
+    "NORTH_FIN_S_41_R75", 0.1,
+    "LIB_CIV_FFI_CitC4_3", 0.5,
+    "LIB_CIV_FFI_CitC4_2", 0.6,
+    "LIB_CIV_FFI_CitC4", 0.5,
+    "LIB_UK_Willys_MB_Hood", 0.1,
+    "LIB_USA_Willys_MB", 0.1,
+    "ifa3_gaz2", 0.7,
+    "LIB_GER_KubelGreyHood", 0.1
 ];
 
 ["vehiclesCivCar", _civCarsWithWeights] call _fnc_saveToTemplate;
 
 
 ["vehiclesCivIndustrial", [
-    "C_Tractor_01_F", 0.3    ]] call _fnc_saveToTemplate;
+    "NORTH_FIN_41_FordV8_Open", 1.0,
+    "LIB_AustinK5_Open", 0.5,
+    "LIB_AustinK5_Tent", 0.5,
+    "LIB_US_GMC_Tent", 0.2,
+    "LIB_US_GMC_Open", 0.2,
+    "LIB_Zis5v", 1.1,
+    "LIB_US6_Tent", 0.1,
+    "LIB_US6_Open", 0.1
+    ]] call _fnc_saveToTemplate;
 
 ["vehiclesCivBoat", [
-    "C_Scooter_Transport_01_F", 0.5]] call _fnc_saveToTemplate;
+    "NORTH_FIN_S_41_Syoksyvene", 0.1,
+    "1715_yawl_base", 1.0
+    ]] call _fnc_saveToTemplate;
 
 ["vehiclesCivRepair", [
-    "C_Truck_02_box_F", 0.1]] call _fnc_saveToTemplate;
+    "LIB_US_GMC_Parm", 0.1,
+    "ifa3_gazaa_eng", 0.1,
+    "LIB_Zis6_Parm", 0.1
+    ]] call _fnc_saveToTemplate;
 
 ["vehiclesCivMedical", [
-    "C_Van_02_medevac_F", 0.1]] call _fnc_saveToTemplate;
+    "NORTH_FIN_41_FordV8_Medical", 0.1
+    ]] call _fnc_saveToTemplate;
 
 ["vehiclesCivFuel", [
-    "NORTH_FIN_41_FordV8_Fuel", 0.1]] call _fnc_saveToTemplate;
+    "NORTH_FIN_41_FordV8_Fuel", 0.1,
+    "LIB_US_GMC_Fuel", 0.1,
+    "LIB_Zis5v_Fuel", 0.1
+    ]] call _fnc_saveToTemplate;
 
 ["vehiclesCivHeli", [
-    "C_Heli_Light_01_civil_F"]] call _fnc_saveToTemplate;
+    "No_helis_in_WW2"]] call _fnc_saveToTemplate;
+
+["variants", [
+]] call _fnc_saveToTemplate;
+
+/////////////////////
+///  Identities   ///
+/////////////////////
+
+["faces", ["NORTH_WhiteHead_01","NORTH_WhiteHead_02","NORTH_WhiteHead_03",
+"NORTH_WhiteHead_04","NORTH_WhiteHead_05","NORTH_WhiteHead_06",
+"NORTH_WhiteHead_07","NORTH_WhiteHead_08","NORTH_WhiteHead_09",
+"NORTH_WhiteHead_10","NORTH_WhiteHead_11","NORTH_WhiteHead_12",
+"NORTH_WhiteHead_13","NORTH_WhiteHead_14","NORTH_WhiteHead_15",
+"NORTH_WhiteHead_16","NORTH_WhiteHead_17","NORTH_WhiteHead_18",
+"NORTH_WhiteHead_19","NORTH_WhiteHead_20"]] call _fnc_saveToTemplate;
+["currencySymbol", "mk"] call _fnc_saveToTemplate;
 
 //////////////////////////
 //       Loadouts       //

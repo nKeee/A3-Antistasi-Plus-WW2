@@ -108,6 +108,20 @@ if (_smokes isNotEqualTo []) then { _unit addMagazines [selectRandomWeighted _sm
 private _grenades = A3A_rebelGear get "Grenades";
 if (_grenades isNotEqualTo []) then { _unit addMagazines [selectRandomWeighted _grenades, 1] };
 
+//TEST TO SET VOICE & FACE
+private _puhuja = selectRandom ["NORTH_WhiteHead_01","NORTH_WhiteHead_02","NORTH_WhiteHead_03",
+"NORTH_WhiteHead_04","NORTH_WhiteHead_05","NORTH_WhiteHead_06",
+"NORTH_WhiteHead_07","NORTH_WhiteHead_08","NORTH_WhiteHead_09",
+"NORTH_WhiteHead_10","NORTH_WhiteHead_11","NORTH_WhiteHead_12",
+"NORTH_WhiteHead_13","NORTH_WhiteHead_14","NORTH_WhiteHead_15",
+"NORTH_WhiteHead_16","NORTH_WhiteHead_17","NORTH_WhiteHead_18",
+"NORTH_WhiteHead_19","NORTH_WhiteHead_20"];
+private _naama = selectRandom ["Male01FIN_FDF", "Male02FIN_FDF", "Male03FIN_FDF", "Male04FIN_FDF", "Male05FIN_FDF", "Male06FIN_FDF", "Male07FIN_FDF",
+"Male08FIN_FDF", "Male09FIN_FDF"];
+
+_unit setFace selectRandom _naama;
+_unit setSpeaker _puhuja;
+
 switch (true) do {
     case (_unitType isEqualTo FactionGet(reb,"unitSniper")): {
         [_unit, "SniperRifles", 50] call A3A_fnc_randomRifle;

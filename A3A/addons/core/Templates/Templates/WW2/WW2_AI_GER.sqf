@@ -19,68 +19,251 @@
 
 
 // vehicles can be placed in more than one category if they fit between both. Cost will be derived by the higher category
-["vehiclesBasic", []] call _fnc_saveToTemplate;
-["vehiclesLightUnarmed", []] call _fnc_saveToTemplate;
-["vehiclesLightArmed", []] call _fnc_saveToTemplate;             // Should be armed, unarmoured to lightly armoured, with 0-4 passengers
-["vehiclesTrucks", []] call _fnc_saveToTemplate;
-["vehiclesCargoTrucks", []] call _fnc_saveToTemplate;
-["vehiclesAmmoTrucks", []] call _fnc_saveToTemplate;
-["vehiclesRepairTrucks", []] call _fnc_saveToTemplate;
-["vehiclesFuelTrucks", []] call _fnc_saveToTemplate;
-["vehiclesMedical", []] call _fnc_saveToTemplate;
-["vehiclesLightAPCs", []] call _fnc_saveToTemplate;             // armed, lightly armoured, with 6-8 passengers 
-["vehiclesAPCs", []] call _fnc_saveToTemplate;                  // armed with enclosed turret, armoured, with 6-8 passengers
-["vehiclesAirborne", []] call _fnc_saveToTemplate;              // airborne vehicles, could be with passenger seats or just a crew 
-["vehiclesIFVs", []] call _fnc_saveToTemplate;                  // capable of surviving multiple rockets, cannon armed, with 6-8 passengers
-["vehiclesTanks", []] call _fnc_saveToTemplate;
-["vehiclesLightTanks", []] call _fnc_saveToTemplate;             // tanks with poor armor and weapons
-["vehiclesAA", []] call _fnc_saveToTemplate;                    // ideally heavily armed with anti-ground capability and enclosed turret. Passengers will be ignored
+["vehiclesBasic", [
+    "fow_v_kubelwagen_ger_heer"
+]] call _fnc_saveToTemplate;
+["vehiclesLightUnarmed", [
+    "LIB_Kfz1_camo", 
+    "LIB_Kfz1_Hood", 
+    "LIB_Kfz1_Hood_camo", 
+    "LIB_Kfz1_Hood_sernyt", 
+    "LIB_Kfz1_sernyt"
+]] call _fnc_saveToTemplate;
+["vehiclesLightArmed", [
+    "LIB_GER_KubelMG42", 
+    "R71GerPre43", 
+    "R71Ger44Camo", 
+    "LIB_Kfz1_MG42_sernyt",
+    "fow_v_kubelwagen_mg34_ger_heer"
+]] call _fnc_saveToTemplate;             // Should be armed, unarmoured to lightly armoured, with 0-4 passengers
+["vehiclesTrucks", [
+    "LIB_opelblitz_open_Feldgrau", 
+    "LIB_opelblitz_tentB_Tarn", 
+    "LIB_opelblitz_tentG_Feldgrau", 
+    "LIB_opelblitz_open_Tarn", 
+    "LIB_SdKfz_7", 
+    "fow_v_type97_truck_ija"
+]] call _fnc_saveToTemplate;
+["vehiclesCargoTrucks", [
+    "LIB_opelblitz_open_Feldgrau", 
+    "LIB_opelblitz_tentB_Tarn", 
+    "LIB_opelblitz_tentG_Feldgrau", 
+    "LIB_opelblitz_open_Tarn", 
+    "LIB_SdKfz_7", 
+    "fow_v_type97_truck_ija"
+]] call _fnc_saveToTemplate;
+["vehiclesAmmoTrucks", [
+    "LIB_SdKfz_7_Ammo", 
+    "LIB_OpelBlitz_Ammo", 
+    "LIB_DAK_OpelBlitz_Ammo"
+]] call _fnc_saveToTemplate;
+["vehiclesRepairTrucks", [
+    "LIB_DAK_OpelBlitz_Parm", 
+    "LIB_OpelBlitz_Parm"
+]] call _fnc_saveToTemplate;
+["vehiclesFuelTrucks", [
+    "fow_v_type97_truck_fuel_ija", 
+    "LIB_ger_opelblitz_citerne", 
+    "LIB_OpelBlitz_Fuel"
+]] call _fnc_saveToTemplate;
+["vehiclesMedical", [
+    "LIB_OpelBlitz_Ambulance_w", 
+    "LIB_GER_M3_Halftrack_medical", 
+    "Lib_ger_SdKfz251IFL_medical", 
+    "LIB_ger_opelblitz_medical"
+]] call _fnc_saveToTemplate;
+["vehiclesLightAPCs", [
+    "Lib_ger_SdKfz251FFV_tarn", 
+    "Lib_ger_SdKfz251FFV_feldgraucamo", 
+    "Lib_ger_SdKfz251FFV_feldgrau", 
+    "Lib_ger_SdKfz251FFV_camo",
+    "LIB_GER_M3_Halftrack",
+    "fow_v_sdkfz_251_camo_foliage_ger_heer"
+]] call _fnc_saveToTemplate;                                    // armed, lightly armoured, with 6-8 passengers 
+["vehiclesAPCs", [
+    "Lib_ger_SdKfz251FFV_tarn", 
+    "Lib_ger_SdKfz251FFV_feldgraucamo", 
+    "Lib_ger_SdKfz251FFV_feldgrau", 
+    "Lib_ger_SdKfz251FFV_camo",
+    "LIB_GER_M3_Halftrack",
+    "fow_v_sdkfz_251_camo_foliage_ger_heer"
+]] call _fnc_saveToTemplate;                                    // armed with enclosed turret, armoured, with 6-8 passengers
+["vehiclesAirborne", [
+    "Lib_ger_SdKfz251FFV_tarn", 
+    "Lib_ger_SdKfz251FFV_feldgraucamo", 
+    "Lib_ger_SdKfz251FFV_feldgrau", 
+    "Lib_ger_SdKfz251FFV_camo", 
+    "LIB_GER_M3_Halftrack", 
+    "fow_v_sdkfz_251_camo_foliage_ger_heer"
+]] call _fnc_saveToTemplate;              // airborne vehicles, could be with passenger seats or just a crew 
+["vehiclesIFVs", ["Not_Supported"]] call _fnc_saveToTemplate;                  // capable of surviving multiple rockets, cannon armed, with 6-8 passengers
+["vehiclesTanks", [
+    "ifa3_StuH_42", 
+    "ifa3_StuG_III_G", 
+    "LIB_PzKpfwVI_E_1", 
+    "LIB_PzKpfwVI_E_tarn52d", 
+    "LIB_PzKpfwVI_E_tarn52c", 
+    "LIB_PzKpfwVI_E_tarn51d", 
+    "LIB_PzKpfwVI_E_tarn51c", 
+    "LIB_PzKpfwVI_E_2", 
+    "LIB_PzKpfwVI_E", 
+    "LIB_PzKpfwVI_B_tarn51c", 
+    "LIB_PzKpfwV", 
+    "LIB_PzKpfwIV_H_tarn51d", 
+    "LIB_PzKpfwIV_H_tarn51c", 
+    "LIB_PzKpfwIV_H", 
+    "ifa3_pz3N", 
+    "ifa3_PzKpfwIV_H"
+]] call _fnc_saveToTemplate;
+["vehiclesLightTanks", [
+    "ifa3_Ba10_wm", 
+    "LIB_SdKfz222", 
+    "LIB_SdKfz222_camo", 
+    "fow_ija_type95_HaGo_1_ija", 
+    "fow_ija_type95_HaGo_2_ija", 
+    "fow_ija_type95_HaGo_3_ija", 
+    "ifa3_t70m_ger", 
+    "pz2f", 
+    "ifa3_pz3f",
+    "fow_v_sdkfz_250_9_camo_ger_heer", 
+    "fow_v_sdkfz_250_9_camo_foliage_ger_heer", 
+    "fow_v_sdkfz_250_9_ger_heer"
+]] call _fnc_saveToTemplate;             // tanks with poor armor and weapons
+["vehiclesAA", [
+    "LIB_SdKfz_7_AA", 
+    "LIB_FlakPanzerIV_Wirbelwind"
+]] call _fnc_saveToTemplate;                    // ideally heavily armed with anti-ground capability and enclosed turret. Passengers will be ignored
 
-["vehiclesTransportBoats", []] call _fnc_saveToTemplate;
-["vehiclesGunBoats", []] call _fnc_saveToTemplate;
+["vehiclesTransportBoats", [
+    "LIB_LCM3_Armed"
+]] call _fnc_saveToTemplate;
+["vehiclesGunBoats", [
+    "LIB_UK_LCI"
+]] call _fnc_saveToTemplate;
 
-["vehiclesPlanesCAS", []] call _fnc_saveToTemplate;             // Will be used with CAS script, must be defined in setPlaneLoadout. Needs fixed gun and either rockets or missiles
-["vehiclesPlanesAA", []] call _fnc_saveToTemplate;              // 
-["vehiclesPlanesTransport", []] call _fnc_saveToTemplate;
+["vehiclesPlanesCAS", [
+    "LIB_Ju87"
+]] call _fnc_saveToTemplate;             // Will be used with CAS script, must be defined in setPlaneLoadout. Needs fixed gun and either rockets or missiles
+["vehiclesPlanesAA", [
+    "LIB_FW190F8"
+]] call _fnc_saveToTemplate;              // 
+["vehiclesPlanesTransport", [
+    "LIB_C47_RAF_snafu"
+]] call _fnc_saveToTemplate;
 
-["vehiclesHelisLight", []] call _fnc_saveToTemplate;            // ideally fragile & unarmed helis seating 4+
-["vehiclesHelisTransport", []] call _fnc_saveToTemplate;
-// Should be capable of dealing damage to ground targets without additional scripting
-["vehiclesHelisLightAttack", []] call _fnc_saveToTemplate;      // Utility helis with fixed or door guns + rocket pods
-["vehiclesHelisAttack", []] call _fnc_saveToTemplate;           // Proper attack helis: Apache, Hind etc
+["vehiclesHelisLight", [
+    "LIB_opelblitz_open_Feldgrau", 
+    "LIB_opelblitz_tentB_Tarn", 
+    "LIB_opelblitz_tentG_Feldgrau", 
+    "LIB_opelblitz_open_Tarn", 
+    "LIB_SdKfz_7", 
+    "fow_v_type97_truck_ija"
+]] call _fnc_saveToTemplate;            // ideally fragile & unarmed helis seating 4+
+["vehiclesHelisTransport", [
+    "Lib_ger_SdKfz251FFV_tarn", 
+    "Lib_ger_SdKfz251FFV_feldgraucamo", 
+    "Lib_ger_SdKfz251FFV_feldgrau", 
+    "Lib_ger_SdKfz251FFV_camo", 
+    "LIB_GER_M3_Halftrack", 
+    "fow_v_sdkfz_251_camo_foliage_ger_heer"
+]] call _fnc_saveToTemplate;            // Should be capable of dealing damage to ground targets without additional scripting
+["vehiclesHelisLightAttack", [
+    "fow_v_sdkfz_250_9_camo_ger_heer", 
+    "fow_v_sdkfz_250_9_camo_foliage_ger_heer", 
+    "fow_v_sdkfz_250_9_ger_heer", 
+    "LIB_SdKfz234_1", 
+    "fow_v_sdkfz_234_1", 
+    "fow_v_sdkfz_222_camo_ger_heer", 
+    "fow_v_sdkfz_222_foliage_ger_heer"
+]] call _fnc_saveToTemplate;      // Utility helis with fixed or door guns + rocket pods
+["vehiclesHelisAttack", [
+    "LIB_PzKpfwVI_E_2", 
+    "LIB_PzKpfwVI_E", 
+    "LIB_PzKpfwVI_B_tarn51c", 
+    "LIB_PzKpfwV"
+]] call _fnc_saveToTemplate;           // Proper attack helis: Apache, Hind etc
 
-["vehiclesArtillery", []] call _fnc_saveToTemplate;
-["magazines", createHashMapFromArray []] call _fnc_saveToTemplate; //element format: [Vehicle class, [Magazines]]
+["vehiclesArtillery", [
+    "LIB_SdKfz124"
+]] call _fnc_saveToTemplate;
+["magazines", createHashMapFromArray [
+["LIB_SdKfz124", ["LIB_20x_Shell_105L28_Gr39HlC_HE","LIB_20x_Shell_105L28_Gr38_HE"]]
+]] call _fnc_saveToTemplate; //element format: [Vehicle class, [Magazines]]
 
-["uavsAttack", []] call _fnc_saveToTemplate;
-["uavsPortable", []] call _fnc_saveToTemplate;
+["uavsAttack", ["not_supported"]] call _fnc_saveToTemplate;
+["uavsPortable", ["not_supported"]] call _fnc_saveToTemplate;
 
 //Config special vehicles
-["vehiclesMilitiaLightArmed", []] call _fnc_saveToTemplate;
-["vehiclesMilitiaTrucks", []] call _fnc_saveToTemplate;
-["vehiclesMilitiaCars", []] call _fnc_saveToTemplate;
-["vehiclesMilitiaAPCs", []] call _fnc_saveToTemplate;              // Militia APCs will be used at roadblocks and attacks at first 4 war levels
+["vehiclesMilitiaLightArmed", [
+    "LIB_GER_KubelMG42", 
+    "R71GerPre43", 
+    "R71Ger44Camo", 
+    "LIB_Kfz1_MG42_sernyt",
+    "fow_v_kubelwagen_mg34_ger_heer"
+]] call _fnc_saveToTemplate;
+["vehiclesMilitiaTrucks", [
+    "LIB_opelblitz_open_Feldgrau", 
+    "LIB_opelblitz_tentB_Tarn", 
+    "LIB_opelblitz_tentG_Feldgrau", 
+    "LIB_opelblitz_open_Tarn", 
+    "LIB_SdKfz_7", 
+    "fow_v_type97_truck_ija"
+]] call _fnc_saveToTemplate;
+["vehiclesMilitiaCars", [
+    "LIB_Kfz1_camo", 
+    "LIB_Kfz1_Hood", 
+    "LIB_Kfz1_Hood_camo", 
+    "LIB_Kfz1_Hood_sernyt", 
+    "LIB_Kfz1_sernyt"
+]] call _fnc_saveToTemplate;
+["vehiclesMilitiaAPCs", [
+    "Lib_ger_SdKfz251FFV_tarn", 
+    "Lib_ger_SdKfz251FFV_feldgraucamo", 
+    "Lib_ger_SdKfz251FFV_feldgrau", 
+    "Lib_ger_SdKfz251FFV_camo", 
+    "fow_v_sdkfz_251_camo_foliage_ger_heer"
+]] call _fnc_saveToTemplate;              // Militia APCs will be used at roadblocks and attacks at first 4 war levels
 
-["vehiclesPolice", []] call _fnc_saveToTemplate;
+["vehiclesPolice", [
+    "LIB_Kfz1_Hood_sernyt", 
+    "LIB_Kfz1_sernyt"
+]] call _fnc_saveToTemplate;
 
-["staticMGs", []] call _fnc_saveToTemplate;
-["staticATs", []] call _fnc_saveToTemplate;
-["staticAAs", []] call _fnc_saveToTemplate;
-["staticMortars", []] call _fnc_saveToTemplate;
-["staticHowitzers", []] call _fnc_saveToTemplate;
+["staticMGs", [
+    "fow_w_mg42_deployed_high_ger_heer"
+]] call _fnc_saveToTemplate;
+["staticATs", [
+    "fow_w_pak40_gray_ger_heer", 
+    "fow_w_pak40_camo_ger_heer", 
+    "fow_w_pak40_camo_foliage_ger_heer",
+    "LIB_leFH18_AT"
+]] call _fnc_saveToTemplate;
+["staticAAs", [
+    "fow_w_flak36_camo_ger_heer", 
+    "LIB_ger_Flak30_Camo", 
+    "fow_w_flak36_green_ger_heer", 
+    "fow_w_flak36_gray_ger_heer",
+    "LIB_Flakvierling_38"
+]] call _fnc_saveToTemplate;
+["staticMortars", [
+    "LIB_Nebelwerfer41"
+]] call _fnc_saveToTemplate;
+["staticHowitzers", [
+    "LIB_leFH18"
+]] call _fnc_saveToTemplate;
 
 ["vehicleRadar", ""] call _fnc_saveToTemplate;
 ["vehicleSam", ""] call _fnc_saveToTemplate;
 
-["howitzerMagazineHE", ""] call _fnc_saveToTemplate;
+["howitzerMagazineHE", "LIB_20x_Shell_105L28_Gr38_HE"] call _fnc_saveToTemplate;
 
-["mortarMagazineHE", ""] call _fnc_saveToTemplate;
+["mortarMagazineHE", "LIB_6Rnd_NbW41"] call _fnc_saveToTemplate;
 ["mortarMagazineSmoke", ""] call _fnc_saveToTemplate;
 
 //Minefield definition
 //CFGVehicles variant of Mines are needed "ATMine", "APERSTripMine", "APERSMine"
-["minefieldAT", []] call _fnc_saveToTemplate;
-["minefieldAPERS", []] call _fnc_saveToTemplate;
+["minefieldAT", ["LIB_TMI_42_MINE"]] call _fnc_saveToTemplate;
+["minefieldAPERS", ["LIB_shumine_42_MINE"]] call _fnc_saveToTemplate;
 
 //SLAT cages, camo nets, logs, doors etc
 ["animations", [
@@ -92,6 +275,8 @@
 ["variants", [
     ["vehClass", ["paint", 1]]
 ]] call _fnc_saveToTemplate;
+
+// #include "WW2_Vehicle_Attributes.sqf"
 
 /////////////////////
 ///  Identities   ///
@@ -107,6 +292,7 @@
 ["voices", ["Male01Ger", "Male02Ger", "Male03Ger", "Male04Ger", "Male05Ger", "Male06Ger"]] call _fnc_saveToTemplate;
 
 //SpecialForces, Militia, Police Faces and Voices, these are Optional if there is no reason to Include them, leave them out.
+/*
 ["sfVoices", []] call _fnc_saveToTemplate;
 ["sfFaces", []] call _fnc_saveToTemplate;
 ["milVoices", []] call _fnc_saveToTemplate;
@@ -121,6 +307,7 @@
 ["milInsignia", []] call _fnc_saveToTemplate;
 ["polInsignia", []] call _fnc_saveToTemplate;
 ["eliteInsignia", []] call _fnc_saveToTemplate;
+*/
 
 //////////////////////////
 //       Loadouts       //
@@ -135,7 +322,7 @@ _loadoutData set ["machineGuns", []];
 _loadoutData set ["marksmanRifles", []];
 _loadoutData set ["sniperRifles", []];
 
-_loadoutData set ["lightATLaunchers", []];
+_loadoutData set ["lightATLaunchers", []]; //     ---------------CONTINUE FROM HEREEE-----------------
 _loadoutData set ["lightHELaunchers", []];
 _loadoutData set ["ATLaunchers", []];
 _loadoutData set ["missileATLaunchers", []];

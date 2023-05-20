@@ -13,55 +13,79 @@
 private _faces = switch (true) do {
 	case (toLowerANSI worldName in ["cam_lao_nam", "vn_khe_sanh"]): {
 		[
-			"AsianHead_A3_01","AsianHead_A3_02","AsianHead_A3_03",
-			"AsianHead_A3_04","AsianHead_A3_05","AsianHead_A3_06",
-			"AsianHead_A3_07"
+			"NORTH_WhiteHead_01","NORTH_WhiteHead_02","NORTH_WhiteHead_03",
+			"NORTH_WhiteHead_04","NORTH_WhiteHead_05","NORTH_WhiteHead_06",
+			"NORTH_WhiteHead_07","NORTH_WhiteHead_08","NORTH_WhiteHead_09",
+			"NORTH_WhiteHead_10","NORTH_WhiteHead_11","NORTH_WhiteHead_12",
+			"NORTH_WhiteHead_13","NORTH_WhiteHead_14","NORTH_WhiteHead_15",
+			"NORTH_WhiteHead_16","NORTH_WhiteHead_17","NORTH_WhiteHead_18",
+			"NORTH_WhiteHead_19","NORTH_WhiteHead_20"
 		];
 	};
 	case ((toLowerANSI worldName) isEqualTo "tanoa"): {
 		[
-			"AsianHead_A3_01", "AsianHead_A3_02", "AsianHead_A3_03", "AsianHead_A3_04", "AsianHead_A3_06", "AsianHead_A3_07",
-			"TanoanHead_A3_01", "TanoanHead_A3_02", "TanoanHead_A3_03", "TanoanHead_A3_04", "TanoanHead_A3_05", "TanoanHead_A3_06",
-			"TanoanHead_A3_07", "TanoanHead_A3_08", "TanoanBossHead"
+			"NORTH_WhiteHead_01","NORTH_WhiteHead_02","NORTH_WhiteHead_03",
+			"NORTH_WhiteHead_04","NORTH_WhiteHead_05","NORTH_WhiteHead_06",
+			"NORTH_WhiteHead_07","NORTH_WhiteHead_08","NORTH_WhiteHead_09",
+			"NORTH_WhiteHead_10","NORTH_WhiteHead_11","NORTH_WhiteHead_12",
+			"NORTH_WhiteHead_13","NORTH_WhiteHead_14","NORTH_WhiteHead_15",
+			"NORTH_WhiteHead_16","NORTH_WhiteHead_17","NORTH_WhiteHead_18",
+			"NORTH_WhiteHead_19","NORTH_WhiteHead_20"
 		];
 	};
 	case ((toLowerANSI worldName) isEqualTo "takistan"): {
 		[
-			"PersianHead_A3_01", "PersianHead_A3_02", "PersianHead_A3_03"
+			"NORTH_WhiteHead_01","NORTH_WhiteHead_02","NORTH_WhiteHead_03",
+			"NORTH_WhiteHead_04","NORTH_WhiteHead_05","NORTH_WhiteHead_06",
+			"NORTH_WhiteHead_07","NORTH_WhiteHead_08","NORTH_WhiteHead_09",
+			"NORTH_WhiteHead_10","NORTH_WhiteHead_11","NORTH_WhiteHead_12",
+			"NORTH_WhiteHead_13","NORTH_WhiteHead_14","NORTH_WhiteHead_15",
+			"NORTH_WhiteHead_16","NORTH_WhiteHead_17","NORTH_WhiteHead_18",
+			"NORTH_WhiteHead_19","NORTH_WhiteHead_20"
 		];
 	};
 	case ((toLowerANSI worldName) isEqualTo "sefrouramal"): {
 		[
-			"AfricanHead_01", "AfricanHead_02", "AfricanHead_03", 
-			"lxWS_African_Head_01", "lxWS_African_Head_02", "lxWS_African_Head_03", "lxWS_African_Head_04", "lxWS_African_Head_Old_Bard", "lxWS_African_Head_05"
+			"NORTH_WhiteHead_01","NORTH_WhiteHead_02","NORTH_WhiteHead_03",
+			"NORTH_WhiteHead_04","NORTH_WhiteHead_05","NORTH_WhiteHead_06",
+			"NORTH_WhiteHead_07","NORTH_WhiteHead_08","NORTH_WhiteHead_09",
+			"NORTH_WhiteHead_10","NORTH_WhiteHead_11","NORTH_WhiteHead_12",
+			"NORTH_WhiteHead_13","NORTH_WhiteHead_14","NORTH_WhiteHead_15",
+			"NORTH_WhiteHead_16","NORTH_WhiteHead_17","NORTH_WhiteHead_18",
+			"NORTH_WhiteHead_19","NORTH_WhiteHead_20"
 		];
 	};
 	case (toLowerANSI worldName in ["enoch", "cup_chernarus_a3", "taviana", "esseker"]): {
 		[
-			"LivonianHead_1", "LivonianHead_2", "LivonianHead_3", "LivonianHead_4",
-			"LivonianHead_5", "LivonianHead_6", "LivonianHead_7", "LivonianHead_8",
-			"LivonianHead_9", "LivonianHead_10",
-			"RussianHead_1", "RussianHead_2", "RussianHead_3", "RussianHead_4", "RussianHead_5"
+			"NORTH_WhiteHead_01","NORTH_WhiteHead_02","NORTH_WhiteHead_03",
+			"NORTH_WhiteHead_04","NORTH_WhiteHead_05","NORTH_WhiteHead_06",
+			"NORTH_WhiteHead_07","NORTH_WhiteHead_08","NORTH_WhiteHead_09",
+			"NORTH_WhiteHead_10","NORTH_WhiteHead_11","NORTH_WhiteHead_12",
+			"NORTH_WhiteHead_13","NORTH_WhiteHead_14","NORTH_WhiteHead_15",
+			"NORTH_WhiteHead_16","NORTH_WhiteHead_17","NORTH_WhiteHead_18",
+			"NORTH_WhiteHead_19","NORTH_WhiteHead_20"
 		]
 	};
 	case (toLowerANSI worldName in ["altis", "malden"]): {
 		[
-			"GreekHead_A3_02", "GreekHead_A3_03", "GreekHead_A3_04", "GreekHead_A3_05", "GreekHead_A3_06",
-			"GreekHead_A3_07", "GreekHead_A3_08", "GreekHead_A3_09", "Ioannou", "Barklem", "AfricanHead_02",
-			"AsianHead_A3_02", "AsianHead_A3_03", "WhiteHead_05"
+			"NORTH_WhiteHead_01","NORTH_WhiteHead_02","NORTH_WhiteHead_03",
+			"NORTH_WhiteHead_04","NORTH_WhiteHead_05","NORTH_WhiteHead_06",
+			"NORTH_WhiteHead_07","NORTH_WhiteHead_08","NORTH_WhiteHead_09",
+			"NORTH_WhiteHead_10","NORTH_WhiteHead_11","NORTH_WhiteHead_12",
+			"NORTH_WhiteHead_13","NORTH_WhiteHead_14","NORTH_WhiteHead_15",
+			"NORTH_WhiteHead_16","NORTH_WhiteHead_17","NORTH_WhiteHead_18",
+			"NORTH_WhiteHead_19","NORTH_WhiteHead_20"
 		];
 	};
 	default {
 		[
-			"WhiteHead_01","WhiteHead_02",
-			"WhiteHead_03","WhiteHead_04","WhiteHead_05","WhiteHead_06","WhiteHead_07",
-			"WhiteHead_08","WhiteHead_09","WhiteHead_11","WhiteHead_12","WhiteHead_14",
-			"WhiteHead_15","WhiteHead_16","WhiteHead_18","WhiteHead_19","WhiteHead_20",
-			"WhiteHead_21", "WhiteHead_23",
-			"AfricanHead_01", "AfricanHead_02", "AfricanHead_03",
-			"AsianHead_A3_01", "AsianHead_A3_02", "AsianHead_A3_03",
-			"PersianHead_A3_01", "PersianHead_A3_02", "PersianHead_A3_03",
-			"Sturrock", "Mavros"
+			"NORTH_WhiteHead_01","NORTH_WhiteHead_02","NORTH_WhiteHead_03",
+			"NORTH_WhiteHead_04","NORTH_WhiteHead_05","NORTH_WhiteHead_06",
+			"NORTH_WhiteHead_07","NORTH_WhiteHead_08","NORTH_WhiteHead_09",
+			"NORTH_WhiteHead_10","NORTH_WhiteHead_11","NORTH_WhiteHead_12",
+			"NORTH_WhiteHead_13","NORTH_WhiteHead_14","NORTH_WhiteHead_15",
+			"NORTH_WhiteHead_16","NORTH_WhiteHead_17","NORTH_WhiteHead_18",
+			"NORTH_WhiteHead_19","NORTH_WhiteHead_20"
 		];
 	};
 };
@@ -70,22 +94,22 @@ private _faces = switch (true) do {
 
 private _currencySymbol = switch (true) do {
 	case (toLowerANSI worldName in ["cam_lao_nam", "vn_khe_sanh"]): {
-		"đ"
+		"mk"
 	};
 	case (toLowerANSI worldName in ["tanoa", "takistan", "sehreno", "sefrouramal"]): {
-		"$"
+		"mk"
 	};
     case ((toLowerANSI worldName) isEqualTo "enoch"): {
-        "zł"
+        "mk"
     };
     case ((toLowerANSI worldName) isEqualTo "cup_chernarus_a3"): {
-        "ČRK"
+        "mk"
     };
     case ((toLowerANSI worldName) isEqualTo "taviana"): {
-        "₽"
+        "mk"
     };
 	default {
-        "€"
+        "mk"
 	};
 };
 
