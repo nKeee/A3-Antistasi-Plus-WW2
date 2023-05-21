@@ -166,16 +166,20 @@ private _rebUniforms = [
 /////////////////////
 ///  Identities   ///
 /////////////////////
-
-["faces", ["NORTH_WhiteHead_01","NORTH_WhiteHead_02","NORTH_WhiteHead_03",
-"NORTH_WhiteHead_04","NORTH_WhiteHead_05","NORTH_WhiteHead_06",
-"NORTH_WhiteHead_07","NORTH_WhiteHead_08","NORTH_WhiteHead_09",
-"NORTH_WhiteHead_10","NORTH_WhiteHead_11","NORTH_WhiteHead_12",
-"NORTH_WhiteHead_13","NORTH_WhiteHead_14","NORTH_WhiteHead_15",
-"NORTH_WhiteHead_16","NORTH_WhiteHead_17","NORTH_WhiteHead_18",
-"NORTH_WhiteHead_19","NORTH_WhiteHead_20"]] call _fnc_saveToTemplate;
-["voices", ["Male01FIN_FDF", "Male02FIN_FDF", "Male03FIN_FDF", "Male04FIN_FDF", "Male05FIN_FDF", "Male06FIN_FDF", "Male07FIN_FDF",
-"Male08FIN_FDF", "Male09FIN_FDF"]] call _fnc_saveToTemplate;
+["names", [
+    "Jorma Kääriäinen", "Erkki Tietäväinen", "Tommi Jokunen", "Antti Eskola", "Joonas Koistinen", "Urho Kekkonen", 
+    "Matti Airivuo"]] call _fnc_saveToTemplate;
+["faces", [
+    "NORTH_WhiteHead_01","NORTH_WhiteHead_02","NORTH_WhiteHead_03",
+    "NORTH_WhiteHead_04","NORTH_WhiteHead_05","NORTH_WhiteHead_06",
+    "NORTH_WhiteHead_07","NORTH_WhiteHead_08","NORTH_WhiteHead_09",
+    "NORTH_WhiteHead_10","NORTH_WhiteHead_11","NORTH_WhiteHead_12",
+    "NORTH_WhiteHead_13","NORTH_WhiteHead_14","NORTH_WhiteHead_15",
+    "NORTH_WhiteHead_16","NORTH_WhiteHead_17","NORTH_WhiteHead_18",
+    "NORTH_WhiteHead_19","NORTH_WhiteHead_20"]] call _fnc_saveToTemplate;
+["voices", [
+    "Male01FIN_FDF", "Male02FIN_FDF", "Male03FIN_FDF", "Male04FIN_FDF", "Male05FIN_FDF", "Male06FIN_FDF", "Male07FIN_FDF",
+    "Male08FIN_FDF", "Male09FIN_FDF"]] call _fnc_saveToTemplate;
 
 //////////////////////////
 //       Loadouts       //

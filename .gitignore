@@ -24,3 +24,4 @@ Antistasi-Plus.biprivatekey
 #Ignore Python bytecode files and bytecode-cache folder
 __pycache__/
 *.py[cod]
+build/A3A.rar

@@ -23,20 +23,13 @@ call A3A_fnc_fetchRebelGear;        // Send current version of rebelGear from se
 private _unitType = if (_forceClass != "") then {_forceClass} else {_unit getVariable "unitType"};
 private _customLoadout = rebelLoadouts get _unitType;
 
-//TEST TO SET VOICE & FACE
-private _naama = selectRandom ["NORTH_WhiteHead_01","NORTH_WhiteHead_02","NORTH_WhiteHead_03",
-"NORTH_WhiteHead_04","NORTH_WhiteHead_05","NORTH_WhiteHead_06",
-"NORTH_WhiteHead_07","NORTH_WhiteHead_08","NORTH_WhiteHead_09",
-"NORTH_WhiteHead_10","NORTH_WhiteHead_11","NORTH_WhiteHead_12",
-"NORTH_WhiteHead_13","NORTH_WhiteHead_14","NORTH_WhiteHead_15",
-"NORTH_WhiteHead_16","NORTH_WhiteHead_17","NORTH_WhiteHead_18",
-"NORTH_WhiteHead_19","NORTH_WhiteHead_20"];
-private _puhuja = selectRandom ["Male01FIN_FDF", "Male02FIN_FDF", "Male03FIN_FDF", "Male04FIN_FDF", "Male05FIN_FDF", "Male06FIN_FDF", "Male07FIN_FDF",
-"Male08FIN_FDF", "Male09FIN_FDF"];
 
-//Set voices and faces 
-_unit setFace _naama;
-_unit setSpeaker _puhuja;
+
+//TEST TO SET VOICE AND FACE 
+//_unit setFace (selectRandom (A3A_faction_reb get "faces"));
+//_unit setSpeaker (selectRandom (A3A_faction_reb get "voices"));
+[_unit, (selectRandom (A3A_faction_reb get "faces")), (selectRandom (A3A_faction_reb get "voices")), (random [0.9, 1, 1.1]), (selectRandom (A3A_faction_reb get "names"))] call A3A_fnc_setIdentity;
+
 
 if (!isNil "_customLoadout") exitWith {
     private _goggles = goggles _unit;
@@ -67,7 +60,7 @@ if (!isNil "_customLoadout") exitWith {
 
 	if (( _unit getVariable "unitType") isEqualTo FactionGet(reb,"unitExp")) then {
 		_unit enableAIFeature ["MINEDETECTION", true]; //This should prevent them from Stepping on the Mines as an "Expert" (It helps, they still step on them)
-	};
+    };
 };
 
 private _fnc_addSecondaryAndMags = {
