@@ -10,40 +10,39 @@
 ["flagTexture", "a3\data_f\flags\flag_fia_co.paa"] call _fnc_saveToTemplate;
 ["flagMarkerType", "geist_Flag_FINEtat"] call _fnc_saveToTemplate;
 
-["vehicleBasic", "I_G_Quadbike_01_F"] call _fnc_saveToTemplate;
-["vehicleLightUnarmed", "I_G_Offroad_01_F"] call _fnc_saveToTemplate;
-["vehicleLightArmed", "I_G_Offroad_01_armed_F"] call _fnc_saveToTemplate;
-["vehicleTruck", "I_G_Van_01_transport_F"] call _fnc_saveToTemplate;
-["vehicleAT", "I_G_Offroad_01_AT_F"] call _fnc_saveToTemplate;
-private _vehicleAA = "";
+["vehicleBasic", "NORTH_FIN_41_R75"] call _fnc_saveToTemplate;
+["vehicleLightUnarmed", "LIB_FRA_CitC4"] call _fnc_saveToTemplate;
+["vehicleLightArmed", "R71GerPre43"] call _fnc_saveToTemplate;
+["vehicleTruck", "NORTH_FIN_41_FordV8"] call _fnc_saveToTemplate;
+["vehicleAT", "fow_v_universalCarrier"] call _fnc_saveToTemplate;
+["vehicleAA", "NORTH_FIN_41_FordV8_Maxim_Quad"] call _fnc_saveToTemplate;
 
-["vehicleBoat", "I_C_Boat_Transport_02_F"] call _fnc_saveToTemplate;
-["vehicleRepair", "I_G_Offroad_01_repair_F"] call _fnc_saveToTemplate;
+["vehicleBoat", "NORTH_FIN_Syoksyvene"] call _fnc_saveToTemplate;
+["vehicleRepair", "NORTH_FIN_S_41_FordV8_Repair"] call _fnc_saveToTemplate;
 
-["vehiclePlane", "I_C_Plane_Civil_01_F"] call _fnc_saveToTemplate;
-["vehiclePayloadPlane", "I_C_Plane_Civil_01_F"] call _fnc_saveToTemplate;
+["vehiclePlane", "NOT_SUPPORTED"] call _fnc_saveToTemplate;
+["vehiclePayloadPlane", "NOT_SUPPORTED"] call _fnc_saveToTemplate;
 
-["vehicleCivCar", "C_Offroad_01_F"] call _fnc_saveToTemplate;
-["vehicleCivTruck", "C_Truck_02_transport_F"] call _fnc_saveToTemplate;
-["vehicleCivHeli", "C_Heli_Light_01_civil_F"] call _fnc_saveToTemplate;
-["vehicleCivBoat", "C_Rubberboat"] call _fnc_saveToTemplate;
-["vehicleCivBoxSupply", "C_Van_01_box_F"] call _fnc_saveToTemplate;
+["vehicleCivCar", "LIB_GazM1_dirty"] call _fnc_saveToTemplate;
+["vehicleCivTruck", "ifa3_gaz55_van"] call _fnc_saveToTemplate;
+["vehicleCivHeli", "NOT_SUPPORTED"] call _fnc_saveToTemplate;
+["vehicleCivBoat", "1715_yawl_base"] call _fnc_saveToTemplate;
+["vehicleCivBoxSupply", "LIB_FRA_CitC4Ferme"] call _fnc_saveToTemplate;
 
 
-["staticMG", "I_G_HMG_02_high_F"] call _fnc_saveToTemplate;
-["staticAT", "I_static_AT_F"] call _fnc_saveToTemplate;
-private _staticAA = "I_static_AA_F";
-["staticMortar", "I_G_Mortar_01_F"] call _fnc_saveToTemplate;
-["staticMortarMagHE", "8Rnd_82mm_Mo_shells"] call _fnc_saveToTemplate;
-["staticMortarMagSmoke", "8Rnd_82mm_Mo_Smoke_white"] call _fnc_saveToTemplate;
+["staticMG", "NORTH_FIN_Maxim_SOV"] call _fnc_saveToTemplate;
+["staticAT", "NORTH_FIN_45PSTK37"] call _fnc_saveToTemplate;
+private _staticAA = "NORTH_FIN_Lahti_L39AA";
+["staticMortar", "NORTH_FIN_81krh32"] call _fnc_saveToTemplate;
+["staticMortarMagHE", "NORTH_10Shell_81mm_MortarHEshell_81krh32"] call _fnc_saveToTemplate;
+["staticMortarMagSmoke", "NORTH_10Shell_81mm_MortarSmokeShell_81krh32"] call _fnc_saveToTemplate;
 
-["minesAT", ["ATMine_Range_Mag", "SLAMDirectionalMine_Wire_Mag"]] call _fnc_saveToTemplate;
-["minesAPERS", ["ClaymoreDirectionalMine_Remote_Mag","APERSMine_Range_Mag", "APERSBoundingMine_Range_Mag", "APERSTripMine_Wire_Mag"]] call _fnc_saveToTemplate;
+["minesAT", ["LIB_TM44_MINE_mag", "LIB_TMI_42_MINE_mag"]] call _fnc_saveToTemplate;
+["minesAPERS", ["LIB_SMI_35_1_MINE_mag","LIB_SMI_35_MINE_mag"]] call _fnc_saveToTemplate;
 
-["breachingExplosivesAPC", [["DemoCharge_Remote_Mag", 1]]] call _fnc_saveToTemplate;
-["breachingExplosivesTank", [["SatchelCharge_Remote_Mag", 1], ["DemoCharge_Remote_Mag", 2]]] call _fnc_saveToTemplate;
+["breachingExplosivesAPC", [["fow_e_tnt_onepound_mag", 1]]] call _fnc_saveToTemplate;
+["breachingExplosivesTank", [["LIB_US_TNT_4pound_mag", 1], ["fow_e_tnt_onepound_mag", 2]]] call _fnc_saveToTemplate;
 
-["vehicleAA", _vehicleAA] call _fnc_saveToTemplate;
 ["staticAA", _staticAA] call _fnc_saveToTemplate;
 
 //////////////////////////////////////
@@ -52,16 +51,13 @@ private _staticAA = "I_static_AA_F";
 
 //classname, price, type, availability condition
 private _vehiclesBlackMarket = [
-    ["I_UAV_01_F", 2000, "UAV", {true}],
-    ["I_LT_01_AA_F", 7500, "AA", {{sidesX getVariable [_x,sideUnknown] isEqualTo teamPlayer} count (milbases + airportsX) > 0}],
-    ["I_APC_Wheeled_03_cannon_F", 15000, "APC", {{sidesX getVariable [_x,sideUnknown] isEqualTo teamPlayer} count seaports > 0}],
-    ["B_Heli_Light_01_dynamicLoadout_F", 25000, "HELI", {{sidesX getVariable [_x,sideUnknown] isEqualTo teamPlayer} count airportsX > 0}]
+    ["ifa3_gazaa_dshk", 1500, "AA", {true}],
+    ["LIB_SdKfz234_3", 2500, "APC", {true}],
+    ["NORTH_FIN_BA10", 2000, "APC", {true}]
 ];
 ["blackMarketStock", _vehiclesBlackMarket] call _fnc_saveToTemplate;
 
 ["variants", [
-    ["I_APC_Wheeled_03_cannon_F", ["Guerilla_01",1]],
-    ["I_LT_01_AA_F", ["Indep_Olive",1]]
 ]] call _fnc_saveToTemplate;
 
 
@@ -73,7 +69,6 @@ private _initialRebelEquipment = [
     //Weapons
     "NORTH_fin_M27",
     "NORTH_fin_M28",
-    "NORTH_fin_M9130",
     "NORTH_l35",
     "NORTH_valopistoolim94",
     //Ammo

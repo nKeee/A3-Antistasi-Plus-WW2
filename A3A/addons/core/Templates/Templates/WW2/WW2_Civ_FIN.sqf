@@ -12,7 +12,7 @@ private _hasApex = "expansion" in A3A_enabledDLC;
 
 private _civCarsWithWeights = [
     "fow_v_truppenfahrrad_ger_heer", 1.8,
-    "LIB_GazM1_dirty", 0.1,
+    "LIB_GazM1", 0.1,
     "LIB_FRA_CitC4Ferme", 0.4,
     "LIB_FRA_CitC4", 0.7,
     "NORTH_FIN_S_41_R75", 0.1,
