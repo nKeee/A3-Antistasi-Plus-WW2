@@ -1,16 +1,19 @@
 <div align="center">
-  <img alt="Antistasi Plus (WW2 Edition)" width="200" heigth="200" src="https://github.com/nKeee/A3-Antistasi-Plus-WW2/assets/77081614/b2c4a4ca-09d5-45b0-9c14-6b2dc40a8af3">
+  <img alt="Antistasi Plus - WW2 Edition" width="200" heigth="200" src="https://github.com/nKeee/A3-Antistasi-Plus-WW2/assets/77081614/b2c4a4ca-09d5-45b0-9c14-6b2dc40a8af3">
   <h1>Antistasi Plus (WW2 Edition)</h1>
 
   <p>
     <i>An Arma 3 persistent multiplayer scenario about guerilla warfare tactics.</i>
     <br/>
-    <i>Fork of Antistasi Plus (By Socrates). Main goal is to overhaul the gamemode with WW2 themes.</i>
+    <i>Modified version of Socrates's Antistasi Plus. Main goal is to overhaul the gamemode with WW2 themes.</i>
   </p>
 </div>
 
 ## WW2 Edition
 - Many aspects of the code are modified to make the WW2 themes feel as authentic as possible, meaning that this version of Antistasi Plus should only be used for WW2 gameplay
+- FIN (rebels) vs GER (occupiers) vs SOV (invaders)
+- Every piece of content will be modified to fit WW2 themes. This means a lot of work to make new turrets, emplacements, etc. work with existing things.
+- Requires a ton of WW2 mods, list will be visible when the mod is ready to be uploaded into steam workshop.
 - Very much work in progress.
 
 ## Features 
