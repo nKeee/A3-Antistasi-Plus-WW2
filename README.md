@@ -1,17 +1,17 @@
 <div align="center">
-  <img alt="Antistasi Plus" width="200" heigth="200" src="https://user-images.githubusercontent.com/6746043/206381805-43f2a69a-2754-49f3-95e2-aeaad8a4cee3.png">
-  <h1>Antistasi Plus</h1>
+  <img alt="Antistasi Plus (WW2 Edition)" width="200" heigth="200" src="https://github.com/nKeee/A3-Antistasi-Plus-WW2/assets/77081614/b2c4a4ca-09d5-45b0-9c14-6b2dc40a8af3">
+  <h1>Antistasi Plus (WW2 Edition)</h1>
+
   <p>
     <i>An Arma 3 persistent multiplayer scenario about guerilla warfare tactics.</i>
     <br/>
-    <i>Fork of Antistasi Community Version focused on expanding player's capabilities and introducing new gameplay features.</i>
-  </p>
-  <p>
-    <a href="https://github.com/igorkis-scrts/A3-Antistasi-Plus/releases/latest">
-        <img src="https://img.shields.io/badge/Current_Stable_Version-2.1.10-red" alt="Antistasi Plus Version">
-    </a>
+    <i>Fork of Antistasi Plus (By Socrates). Main goal is to overhaul the gamemode with WW2 themes.</i>
   </p>
 </div>
+
+## WW2 Edition
+- Many aspects of the code are modified to make the WW2 themes feel as authentic as possible, meaning that this version of Antistasi Plus should only be used for WW2 gameplay
+- Very much work in progress.
 
 ## Features 
 - Arms Dealer vendor with the ability to directly buy and sell weapons, items and gear
