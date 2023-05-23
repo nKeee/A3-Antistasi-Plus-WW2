@@ -79,8 +79,7 @@ while {visibleMap} do {
 			_power = [_siteX] call A3A_fnc_getSideRadioTowerInfluence;
 			_textX = format [localize "STR_A3A_cityinfo_text_1",_siteX,_numCiv,_prestigeOPFOR,_prestigeBLUFOR,"%",FactionGet(occ,"name"),FactionGet(reb,"name")];
 			_positionX = getMarkerPos _siteX;
-			_result = "NONE";
-			switch (_power) do {
+			_result = switch (_power) do {
 				case teamPlayer: {FactionGet(reb,"name")};
 				case Occupants: {FactionGet(occ,"name")};
 				case Invaders: {FactionGet(inv,"name")};

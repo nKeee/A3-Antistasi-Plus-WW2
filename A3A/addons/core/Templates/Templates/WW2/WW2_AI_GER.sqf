@@ -395,7 +395,7 @@ _loadoutData set ["goggles", ["fow_g_gloves4"]];
 //TODO - ACE overrides for misc essentials, medical and engineer gear
 
 ///////////////////////////////////////
-//    Special Forces Loadout Data    //
+//    Special Forces Loadout Data    // Waffen-SS
 ///////////////////////////////////////
 
 private _sfLoadoutData = _loadoutData call _fnc_copyLoadoutData;
@@ -425,10 +425,16 @@ _sfLoadoutData set ["marksmanRifles", [
 _sfLoadoutData set ["sniperRifles", [
 ["GLIB_FIN_M39", "", "", "", ["GLIB_FIN_5Rnd_762x54mm"], [], ""]
 ]];
+_sfLoadoutData set ["lightATLaunchers", [
+    ["LIB_RPzB","","","",["LIB_1Rnd_RPzB",1],[],""]
+]];
+_sfLoadoutData set ["ATLaunchers", [
+    ["LIB_RPzB","","","",["LIB_1Rnd_RPzB",1],[],""]
+]];
 _sfLoadoutData set ["sidearms", []];
 
 /////////////////////////////////
-//    Elite Loadout Data       //
+//    Elite Loadout Data       // Eastern front veterans? Luftwaffe?
 /////////////////////////////////
 
 private _eliteLoadoutData = _loadoutData call _fnc_copyLoadoutData;
@@ -443,36 +449,23 @@ _eliteLoadoutData set ["helmets", []];
 _eliteLoadoutData set ["NVGs", []];
 _eliteLoadoutData set ["binoculars", []];
 _eliteLoadoutData set ["antiInfantryGrenades", []];
-_eliteLoadoutData set ["lightATLaunchers", []];
-_eliteLoadoutData set ["lightHELaunchers", []];
-_eliteLoadoutData set ["ATLaunchers", []];
-
-_eliteLoadoutData set ["slRifles", [
-
+_eliteLoadoutData set ["lightATLaunchers", [
+    ["fow_w_pzfaust_60","","","",["fow_1Rnd_pzfaust_60",1],[],""]
 ]];
-
-_eliteLoadoutData set ["rifles", [
-
+_eliteLoadoutData set ["ATLaunchers", [
+    ["LIB_RPzB","","","",["LIB_1Rnd_RPzB",1],[],""]
 ]];
-_eliteLoadoutData set ["carbines", [
-
-]];
-_eliteLoadoutData set ["grenadeLaunchers", [
-
-]];
-_eliteLoadoutData set ["machineGuns", [
-
-]];
-_eliteLoadoutData set ["marksmanRifles", [
-
-]];
-_eliteLoadoutData set ["sniperRifles", [
-
-]];
+_eliteLoadoutData set ["slRifles", []];
+_eliteLoadoutData set ["rifles", []];
+_eliteLoadoutData set ["carbines", []];
+_eliteLoadoutData set ["grenadeLaunchers", []];
+_eliteLoadoutData set ["machineGuns", []];
+_eliteLoadoutData set ["marksmanRifles", []];
+_eliteLoadoutData set ["sniperRifles", []];
 _eliteLoadoutData set ["sidearms", []];
 
 /////////////////////////////////
-//    Military Loadout Data    //
+//    Military Loadout Data    // Veterans?
 /////////////////////////////////
 
 private _militaryLoadoutData = _loadoutData call _fnc_copyLoadoutData;
@@ -503,19 +496,28 @@ _militaryLoadoutData set ["marksmanRifles", [
 _militaryLoadoutData set ["sniperRifles", [
 ["fow_w_k98", "", "", "", ["LIB_5Rnd_792x57"], [], ""]
 ]];
+_militaryLoadoutData set ["lightATLaunchers", [
+    ["fow_w_pzfaust_30","","","",["fow_1Rnd_pzfaust_30",1],[],""],
+    ["fow_w_pzfaust_60","","","",["fow_1Rnd_pzfaust_60",1],[],""]
+]];
+_militaryLoadoutData set ["ATLaunchers", [
+    ["LIB_RPzB","","","",["LIB_1Rnd_RPzB",1],[],""]
+]];
 _militaryLoadoutData set ["sidearms", [
 ["fow_w_p08","","","",["fow_8Rnd_9x19",8],[],""]
 ]];
 
 ///////////////////////////////
-//    Police Loadout Data    //
+//    Police Loadout Data    // Gestapo?
 ///////////////////////////////
 
 private _policeLoadoutData = _loadoutData call _fnc_copyLoadoutData;
 
-_policeLoadoutData set ["uniforms", ["U_LIB_GER_Officer_SSUstufabMP40", "U_LIB_GER_Rifleman_SSOmnnG43", "U_LIB_GER_Rifleman_SSMnnK98"]];
-_policeLoadoutData set ["vests", ["V_LIB_GER_OfficerVestBlack_0A", "V_LIB_GER_VestG43_0b", "V_LIB_GER_VestKar98_0b"]];
-_policeLoadoutData set ["helmets", ["H_LIB_GER_OfficerCap_SS", "H_LIB_GER_Helmet_SSbT1"]];
+_policeLoadoutData set ["uniforms", ["U_LIB_GER_unterofficer_WssFrsbrgScharf12Mp40"]];
+_policeLoadoutData set ["vests", ["V_LIB_GER_OfficerVestBlack_0A", "V_LIB_GER_VestG43_0b", "fow_v_heer_p38"]];
+_policeLoadoutData set ["helmets", ["H_LIB_GER_OfficerCap_WSS_Bo", "H_LIB_GER_Cap_WSS_Bm", "H_LIB_GER_CapOfficer_WSS_Bo",
+"H_LIB_GER_Helmet_WSSgdT1", "H_LIB_GER_Helmetns_WSSgdT1", "H_LIB_GER_Helmetnet_WSSgdT1"
+]];
 
 _policeLoadoutData set ["SMGs", [
 ["lib_Mp35", "", "", "", ["lib_32Rnd_9x19_MP35"], [], ""],
@@ -529,12 +531,12 @@ _policeLoadoutData set ["sidearms", [
 ]];
 
 ////////////////////////////////
-//    Militia Loadout Data    //
+//    Militia Loadout Data    // Heer 
 ////////////////////////////////
 
 private _militiaLoadoutData = _loadoutData call _fnc_copyLoadoutData;
-_militiaLoadoutData set ["uniforms", ["U_LIB_GER_rifleman_HeerGebSchjG3340"]];
-_militiaLoadoutData set ["vests", ["V_LIB_GER_VestKar98_8a", "V_LIB_GER_VestKar98_9b"]];
+_militiaLoadoutData set ["uniforms", ["U_LIB_GER_Schutze"]];
+_militiaLoadoutData set ["vests", ["V_LIB_GER_VestKar98", "V_LIB_GER_VestKar98_8a", "V_LIB_GER_VestKar98_9b"]];
 _militiaLoadoutData set ["backpacks", ["B_LIB_GER_A_frame"]];
 _militiaLoadoutData set ["helmets", ["fow_h_ger_m42_heer_01"]];
 
@@ -555,6 +557,13 @@ _militiaLoadoutData set ["machineGuns", [
 ]];
 _militiaLoadoutData set ["marksmanRifles", [
 ["fow_w_k98", "", "", "", ["LIB_5Rnd_792x57"], [], ""]
+]];
+_militiaLoadoutData set ["lightATLaunchers", [
+    ["fow_w_pzfaust_30","","","",["fow_1Rnd_pzfaust_30",1],[],""],
+    ["fow_w_pzfaust_60","","","",["fow_1Rnd_pzfaust_60",1],[],""]
+]];
+_militiaLoadoutData set ["ATLaunchers", [
+    ["fow_w_pzfaust_60","","","",["fow_1Rnd_pzfaust_60",1],[],""]
 ]];
 _militiaLoadoutData set ["sidearms", [
 ["fow_w_p08","","","",["fow_8Rnd_9x19",8],[],""]
@@ -798,6 +807,35 @@ private _engineerTemplate = {
     ["backpacks"] call _fnc_setBackpack;
 
     [selectRandom ["carbines", "SMGs"]] call _fnc_setPrimary;
+    ["primary", 6] call _fnc_addMagazines;
+
+    ["sidearms"] call _fnc_setHandgun;
+    ["handgun", 2] call _fnc_addMagazines;
+
+    ["items_medical_standard"] call _fnc_addItemSet;
+    ["items_engineer_extras"] call _fnc_addItemSet;
+    ["items_miscEssentials"] call _fnc_addItemSet;
+
+    if (random 1 > 0.5) then {["lightExplosives", 1] call _fnc_addItem;};
+
+    ["antiInfantryGrenades", 1] call _fnc_addItem;
+    ["smokeGrenades", 2] call _fnc_addItem;
+
+    ["maps"] call _fnc_addMap;
+    ["watches"] call _fnc_addWatch;
+    ["compasses"] call _fnc_addCompass;
+    ["radios"] call _fnc_addRadio;
+    ["NVGs"] call _fnc_addNVGs;
+};
+
+private _flametrooperTemplate = {
+    ["helmets"] call _fnc_setHelmet;
+    [selectRandomWeighted [[], 1.5, "glasses", 0.75, "goggles", 0.5]] call _fnc_setFacewear;
+    ["vests"] call _fnc_setVest;
+    ["uniforms"] call _fnc_setUniform;
+    ["41_Flammenwerfer_Balloons"] call _fnc_setBackpack;
+
+    [selectRandom ["41_Flammenwerfer_02_F"]] call _fnc_setPrimary;
     ["primary", 6] call _fnc_addMagazines;
 
     ["sidearms"] call _fnc_setHandgun;
@@ -1133,7 +1171,7 @@ private _unitTypes = [
 	["Rifleman", _riflemanTemplate, [], [_prefix]],
 	["Radioman", _radiomanTemplate, [], [_prefix]],
 	["Medic", _medicTemplate, [["medic", true]], [_prefix]],
-	["Engineer", _engineerTemplate, [["engineer", true]], [_prefix]],
+	["Engineer", _flametrooperTemplate, [["engineer", true]], [_prefix]],
 	["ExplosivesExpert", _explosivesExpertTemplate, [["explosiveSpecialist", true]], [_prefix]],
 	["Grenadier", _grenadierTemplate, [], [_prefix]],
 	["LAT", _latTemplate, [], [_prefix]],
