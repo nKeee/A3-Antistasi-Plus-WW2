@@ -246,7 +246,7 @@
     "LIB_Flakvierling_38"
 ]] call _fnc_saveToTemplate;
 ["staticMortars", [
-    "LIB_Nebelwerfer41"
+    "LIB_GrWr34_g"
 ]] call _fnc_saveToTemplate;
 ["staticHowitzers", [
     "LIB_leFH18"
